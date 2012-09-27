@@ -1,0 +1,2 @@
+module StorageRentalHelper
+end

@@ -1,4 +1,17 @@
 Fifthrails::Application.routes.draw do
+  resources :users, :addresses, :accounts
+  resources :sessions, only: [:new, :create, :destroy]
+
+  root to:'storage_rental#show'
+
+  match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy'
+
+  resources :storage_rental do
+
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
