@@ -11,8 +11,27 @@
 #  account_id     :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  address_type   :string(255)
 #
 
 class Address < ActiveRecord::Base
-  attr_accessible :account_id, :address_line_1, :address_line_2, :city, :state, :zip_code
+  attr_accessible :address_line_1, :address_line_2, :city, :state, :zip_code, :address_type
+  belongs_to :account
+
+  before_save {|address| address.address_type = address_type.capitalize}
+
+  validates :address_line_1, :city, :state, :zip_code, :address_type, presence: true
+  validates :state, length: {is: 2}
+  validates :zip_code, length: {is: 5}
+
+  ADDRESS_TYPES = %w[Billing Shipping Both]
+  validate :valid_address_type
+
+  protected
+  def valid_address_type
+    address_type do |a|
+      errors.add(:address_type, "#{a} is not a valid address type") unless ADDRESS_TYPES.include? a
+    end
+  end
+
 end

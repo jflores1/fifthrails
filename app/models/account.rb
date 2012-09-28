@@ -17,7 +17,9 @@
 class Account < ActiveRecord::Base
   attr_accessible :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :work_phone
   belongs_to :user
+  has_many :addresses
 
+  #strip digits and return string of numbers
   before_validation do |account|
     account.cell_phone = cell_phone.gsub(/\D/,'')
     account.home_phone = home_phone.gsub(/\D/,'')
