@@ -15,5 +15,25 @@
 #
 
 class Account < ActiveRecord::Base
-  attr_accessible :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :user_id, :work_phone
+  attr_accessible :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :work_phone
+  belongs_to :user
+
+  before_validation do |account|
+    account.cell_phone = cell_phone.gsub(/\D/,'')
+    account.home_phone = home_phone.gsub(/\D/,'')
+    account.work_phone = work_phone.gsub(/\D/,'')
+  end
+
+  before_save do |account|
+    account.first_name = first_name.capitalize
+    account.last_name  = last_name.capitalize
+    account.middle_initial = middle_initial.capitalize
+  end
+
+  validates :user_id, presence:true
+  validates :first_name, presence:true
+  validates :last_name, presence:true
+  validates :middle_initial, length:  {is: 1}, allow_blank: true
+  validates :cell_phone, :home_phone, :work_phone, length: {in: 7..16}, allow_blank: true
+
 end
