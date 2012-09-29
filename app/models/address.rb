@@ -29,9 +29,7 @@ class Address < ActiveRecord::Base
 
   protected
   def valid_address_type
-    address_type do |a|
-      errors.add(:address_type, "#{a} is not a valid address type") unless ADDRESS_TYPES.include? a
-    end
+    errors.add(:address_type, "Sorry, not a valid address type") unless ADDRESS_TYPES.include? address_type
   end
 
 end

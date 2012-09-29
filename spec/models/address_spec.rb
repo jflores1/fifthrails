@@ -97,6 +97,21 @@ describe Address do
       it {should_not be_valid}
     end
 
+    describe "Verify Billing is an appropriate address type" do
+      before {@address.address_type = "Billing"}
+      it {should be_valid}
+    end
+
+    describe "Verify Shipping is an appropriate address type" do
+      before {@address.address_type = "Shipping"}
+      it {should be_valid}
+    end
+
+    describe "Verify Both is an appropriate address type" do
+      before {@address.address_type = "Both"}
+      it {should be_valid}
+    end
+
   end
 
 
