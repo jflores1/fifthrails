@@ -6,6 +6,16 @@ FactoryGirl.define do
     password_confirmation "password"
   end
 
+  factory :address do
+    address_line_1  "4591 Derby Ln Se"
+    address_line_2  ""
+    city            "Smyrna"
+    state           "GA"
+    zip_code        "30082"
+    account
+    address_type    "Shipping"
+  end
+
   factory :account do
     first_name      "Jesse"
     middle_initial  "A"

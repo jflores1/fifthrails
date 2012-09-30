@@ -14,8 +14,12 @@ require 'spec_helper'
 
 describe OrderItems do
 
-  let(:account) {FactoryGirl.create(:account)}
-  let(:address) {FactoryGirl.create(:address)}
   let(:order)   {FactoryGirl.create(:order)}
+  let (:item)   {FactoryGirl.create(:item)}
+
+  before {@order_item = order.orderitems.build(item_id: 1, quantity:5)}
+
+  it {should respond_to(:item_id)}
+  it {should respond_to(:quantity)}
 
 end

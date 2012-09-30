@@ -61,18 +61,6 @@ describe Item do
     it {should be_valid}
   end
 
-  describe '#validate_item_type' do
-    it_should_run_callbacks(:validate_item_type)
-  end
-
-  describe "validate_item_type" do
-    it 'should add an error when the error condition is true' do
-      @item.item_type.stub_existing :error_condition => true
-      @item.item_type.send :validate_item_type
-      @item.item_type.errors[:attribute].should be_present
-    end
-  end
-
 
   #Item Relationships
 
