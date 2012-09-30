@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/account.rb" afterPath="$PROJECT_DIR$/app/models/account.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb" afterPath="$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories.rb" afterPath="$PROJECT_DIR$/spec/factories.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/address_spec.rb" afterPath="$PROJECT_DIR$/spec/models/address_spec.rb" />
     </list>
     <ignored path="fifthrails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +27,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="42" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+            <state line="1" column="58" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -38,15 +37,6 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="12" column="7" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="56" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -82,16 +72,25 @@
       <file leaf-file-name="item.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/item.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="22" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0">
+            <state line="28" column="78" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="item_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="item_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/models/item_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="39" selection-start="1572" selection-end="1572" vertical-scroll-proportion="1.0911855">
+            <state line="54" column="39" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20120930033633_change_item_description_from_string_to_text.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="43" selection-start="122" selection-end="122" vertical-scroll-proportion="0.049342107">
               <folding />
             </state>
           </provider>
@@ -119,7 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/address.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120929033753_add_index_to_account.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120929034003_add_index_to_addresses.rb" />
         <option value="$PROJECT_DIR$/app/models/account.rb" />
@@ -130,19 +128,20 @@
         <option value="$PROJECT_DIR$/app/models/order_items.rb" />
         <option value="$PROJECT_DIR$/spec/models/order_items_spec.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120930033041_rename_customer_id_to_account_id_in_items.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb" />
         <option value="$PROJECT_DIR$/spec/factories.rb" />
         <option value="$PROJECT_DIR$/spec/models/address_spec.rb" />
         <option value="$PROJECT_DIR$/spec/models/item_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/item.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1447" />
-    <option name="y" value="8" />
-    <option name="width" value="1848" />
-    <option name="height" value="795" />
+    <option name="x" value="26" />
+    <option name="y" value="22" />
+    <option name="width" value="1396" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -212,7 +211,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,14 +515,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1447" y="8" width="1848" height="795" extended-state="0" />
+    <frame x="26" y="22" width="1396" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26859045" sideWeight="0.99856734" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3585185" sideWeight="0.9984686" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -587,27 +590,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120930001251_add_customer_items_to_items.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120930002137_rename_date_to_order_date_to_orders.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="180" selection-end="180" vertical-scroll-proportion="0.13867489">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="56" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/order_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="48" selection-start="825" selection-end="825" vertical-scroll-proportion="0.6646796">
@@ -625,13 +607,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20120930033041_rename_customer_id_to_account_id_in_items.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="51" selection-start="127" selection-end="127" vertical-scroll-proportion="0.046224963">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="51" selection-start="182" selection-end="182" vertical-scroll-proportion="0.06933744">
           <folding />
         </state>
       </provider>
@@ -664,6 +639,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/address_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="26" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="58" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="56" selection-start="676" selection-end="676" vertical-scroll-proportion="0.49342105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="7" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/address.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="95" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.0">
@@ -680,21 +683,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/item.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="22" selection-start="804" selection-end="804" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/models/address_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="26" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+        <state line="28" column="78" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/item_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="39" selection-start="1572" selection-end="1572" vertical-scroll-proportion="1.0911855">
+        <state line="54" column="39" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120930033633_change_item_description_from_string_to_text.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="43" selection-start="122" selection-end="122" vertical-scroll-proportion="0.049342107">
           <folding />
         </state>
       </provider>
