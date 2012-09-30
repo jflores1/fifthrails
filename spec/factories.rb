@@ -16,5 +16,23 @@ FactoryGirl.define do
     user
   end
 
+  factory :order do
+    order_date      "2012-12-31"
+    account
+    order_amount    "25.00"
+    address
+  end
+
+  factory :item do
+    name              "Test Item"
+    item_type         "Customer"
+    item_description  "Description"
+    account
+    item_length       "12.5"
+    item_width        "12.5"
+    item_height       "13.5"
+    item_status       "Stored"
+  end
+
 
 end

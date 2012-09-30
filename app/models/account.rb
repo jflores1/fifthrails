@@ -18,6 +18,7 @@ class Account < ActiveRecord::Base
   attr_accessible :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :work_phone
   belongs_to :user
   has_many :addresses
+  has_many :orders
 
   #strip digits and return string of numbers
   before_validation do |account|

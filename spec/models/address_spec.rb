@@ -18,9 +18,11 @@ require 'spec_helper'
 
 describe Address do
 
+  #Generate related factories
   let(:user) {FactoryGirl.create(:user)}
   let(:account) {FactoryGirl.create(:account)}
 
+  #Test basic construction
   before {@address = account.addresses.build(address_line_1:"4591 Derby Ln Se", address_line_2:"", city:"Smyrna", state:"GA", zip_code:"30082", address_type:"Billing")}
 
   subject {@address}
@@ -31,6 +33,7 @@ describe Address do
   it {should respond_to(:zip_code)}
   it {should respond_to(:address_type)}
 
+  #Test validation methods
   describe "Address Validators" do
 
     describe "Verify presence of address line 1" do
