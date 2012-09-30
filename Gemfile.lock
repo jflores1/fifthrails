@@ -122,6 +122,8 @@ GEM
       activesupport (>= 3.0)
       railties (>= 3.0)
       rspec (~> 2.11.0)
+    rspec_candy (0.2.0)
+      rspec
     rubyzip (0.9.9)
     sass (3.2.1)
     sass-rails (3.2.5)
@@ -171,6 +173,7 @@ DEPENDENCIES
   rack-google_analytics
   rails (= 3.2.8)
   rspec-rails
+  rspec_candy
   sass-rails (~> 3.2.3)
   sqlite3
   therubyracer

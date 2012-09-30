@@ -8,6 +8,7 @@ gem 'thin'
 group :development, :test do
   gem 'rspec-rails'
   gem 'annotate'
+  gem 'rspec_candy'
 end
 
 group :development do

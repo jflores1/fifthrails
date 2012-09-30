@@ -30,6 +30,8 @@ class Item < ActiveRecord::Base
 
   validates :name, presence: true
   validates :item_type, presence: true
+  validates :account_id, presence: true, allow_blank: true, allow_nil: true
+  validates :item_status, presence: true, allow_blank: true, allow_nil:true
 
   validate :valid_item_type
   validate :valid_item_status

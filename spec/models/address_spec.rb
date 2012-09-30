@@ -53,11 +53,10 @@ describe Address do
       end
     end
 
-    #this test passed when tried in the console
-    #describe "Verify presence of city" do
-    #  before {@address.city = ""}
-    #  it {should be_valid}
-    #end
+    describe "Verify presence of city" do
+      before {@address.city = ""}
+      it {should_not be_valid}
+    end
 
     describe "Verify presence and length of State" do
       describe "Verify presence of state" do
@@ -82,18 +81,22 @@ describe Address do
         it {should_not be_valid}
       end
 
-      #this test passed in the console
-      #describe "Verify length of zip code" do
-      #  before {@address.zip_code.length != 5}
-      #  it {should_not be_valid}
-      #end
+      describe "Verify length of zip code" do
+        before {@address.zip_code = 9999}
+        it {should_not be_valid}
+      end
+
+      describe "Verify zip code isn't too long" do
+        before {@address.zip_code = 111111}
+        it {should_not be_valid}
+      end
     end
 
-    #this test passed in the console
-    #describe "Verify presence of Address Type" do
-    #  before {@address.address_type = ""}
-    #  it {should be_valid}
-    #end
+
+    describe "Verify presence of Address Type" do
+      before {@address.address_type = ""}
+      it {should_not be_valid}
+    end
 
     describe "Verify address type criteria" do
       before {@address.address_type = "Not Valid"}
