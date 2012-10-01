@@ -15,6 +15,8 @@ class Order < ActiveRecord::Base
   attr_accessible :address_id, :order_date, :order_amount
   belongs_to :account
   has_many   :addresses
+  has_many   :order_items
+  has_many   :items, through: :order_items
 
   validates :address_id, presence:true
   validates :order_amount, presence: true

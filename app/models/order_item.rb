@@ -10,7 +10,12 @@
 #  updated_at :datetime         not null
 #
 
-class OrderItems < ActiveRecord::Base
-  attr_accessible :item_id, :order_id, :quantity
+class OrderItem < ActiveRecord::Base
+  attr_accessible :item_id, :quantity
+  belongs_to :order
+  belongs_to :item
+
+  validates :item, presence: true
+  validates :quantity, presence: true
 
 end

@@ -19,6 +19,7 @@ class Account < ActiveRecord::Base
   belongs_to :user
   has_many :addresses
   has_many :orders
+  has_many :items
 
   #strip digits and return string of numbers
   before_validation do |account|
