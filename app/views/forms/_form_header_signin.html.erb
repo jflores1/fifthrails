@@ -1,7 +1,7 @@
 <div class="header-form">
 
   <% if @current_user then %>
-      <p>Hi, <%= @current_user.account.first_name %>! </p>
+      <p>Hi, <%= @current_user.email_address %>! </p>
   <% else %>
     <%= render 'forms/form_signin'%>
   <% end %>
