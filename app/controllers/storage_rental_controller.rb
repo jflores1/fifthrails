@@ -4,4 +4,5 @@ class StorageRentalController < ApplicationController
 
   end
 
+
 end

@@ -1,6 +1,6 @@
 <%= form_for(:session, url: sessions_path) do |form| %>
 
-    <%= form.text_field :email_address %>
-    <%= form.password_field :password %>
+    <%= form.text_field :email_address, placeholder:"email address" %>
+    <%= form.password_field :password, placeholder:"password" %>
     <%= form.submit "Sign In" %>
 <% end %>

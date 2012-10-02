@@ -1,1 +1,13 @@
-test of header
+<div class="row-fluid">
+  <div class="span4">
+    <%= link_to image_tag("logo.gif"), root_path %>
+
+  </div>
+  <div class="span3">
+    <h1 class="branch-location">Atlanta, GA</h1>
+  </div>
+  <div class="span5">
+    <%= image_tag "header-contact-button.gif", class:"contact-button" %>
+    <%= render 'forms/form_header_signin' %>
+  </div>
+</div>
