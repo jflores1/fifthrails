@@ -1,7 +1,7 @@
 <div class="header-form">
 
   <% if @current_user then %>
-      <p>Hi, <%= @current_user.email_address %>! </p>
+      <p>Hi, <%= @current_user.email_address %>! <%= link_to "Not you?", signout_path %> </p>
   <% else %>
     <%= render 'forms/form_signin'%>
   <% end %>

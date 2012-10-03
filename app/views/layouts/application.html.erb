@@ -12,11 +12,14 @@
   <%= yield(:head) %>
 </head>
 <body>
-<header>
-    <div class="container">
-      <%= render 'layouts/header' %>
-    </div>
+<header class="navbar navbar-fixed-top">
+  <nav class="navbar-inner">
+      <%= render 'layouts/navigation' %>
+  </nav>
 </header>
+<div class="container">
+  <%= render 'layouts/header' %>
+</div>
 <div id="main" role="main">
   <div class="container">
     <div class="content">
@@ -26,9 +29,11 @@
           <%= yield %>
         </div>
       </div>
-      <footer>
-        <%= render 'layouts/footer' %>
-        <%= debug(params) if Rails.env.development? %>
+      <footer class="navbar">
+        <nav class="navbar-inner">
+          <%= render 'layouts/footer' %>
+          <%= debug(params) if Rails.env.development? %>
+        </nav>
       </footer>
     </div>
   </div> <!--! end of .container -->

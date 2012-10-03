@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if signed_in?
+      @user = current_user
+      redirect_to @user
+    else
+      @user = User.new
+    end
   end
 
   def create
@@ -16,6 +21,7 @@ class UsersController < ApplicationController
       sign_in @user
       redirect_to @user
     else
+      flash[:error] = "Sorry, something went wrong"
       render 'new'
     end
   end
