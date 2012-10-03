@@ -1,3 +1,6 @@
 Hello, User!
-Your email address is <%= @user.email_address %>
-<%= link_to "Sign Out", signout_path %>
+
+<ul>
+  <li><%= link_to "Edit Account Info", edit_account_path %></li>
+  <li><%= link_to "Sign Out", signout_path %></li>
+</ul>

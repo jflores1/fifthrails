@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      redirect_to @user
+      redirect_to new_user_account_path
     else
       flash[:error] = "Sorry, something went wrong"
       render 'new'
@@ -50,13 +50,13 @@ class UsersController < ApplicationController
 
   private
 
-  def signed_in_user
-    redirect_to signin_url, notice: "Please sign in." unless signed_in?
-  end
-
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to(root_path) unless current_user?(@user)
-  end
+  #def signed_in_user
+  #  redirect_to signin_url, notice: "Please sign in." unless signed_in?
+  #end
+  #
+  #def correct_user
+  #  @user = User.find(params[:id])
+  #  redirect_to(root_path) unless current_user?(@user)
+  #end
 
 end

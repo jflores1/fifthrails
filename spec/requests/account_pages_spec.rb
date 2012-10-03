@@ -1,11 +1,30 @@
 require 'spec_helper'
 
 describe "AccountPages" do
-  describe "GET /account_pages" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get account_pages_index_path
-      response.status.should be(200)
+
+  subject {page}
+
+  let(:user) {FactoryGirl.create(:user)}
+  before {sign_in user}
+
+  describe "Create Account" do
+    before {visit new_account_path}
+    let(:submit) {"Complete Account"}
+
+    it {should have_selector("title", text: "Create Account")}
+
+    describe "with valid information" do
+      before do
+        fill_in "First Name", with: "First Name"
+        fill_in "Middle Initial", with: ""
+        fill_in "Last Name", with: "Last Name"
+        fill_in "Home Phone", with: "555-555-5555"
+        fill_in "Cell Phone", with: ""
+        fill_in "Work Phone", with:""
+      end
+      it "should create an account" do
+        expect {click_button submit}.to change(Account, :count).by(1)
+      end
     end
   end
 end
