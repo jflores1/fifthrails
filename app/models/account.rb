@@ -22,7 +22,7 @@ class Account < ActiveRecord::Base
   has_many :items
 
   #strip digits and return string of numbers
-  before_validation do |account|
+  before_save do |account|
     account.cell_phone = cell_phone.gsub(/\D/,'')
     account.home_phone = home_phone.gsub(/\D/,'')
     account.work_phone = work_phone.gsub(/\D/,'')
