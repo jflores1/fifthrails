@@ -1,5 +1,8 @@
 Fifthrails::Application.routes.draw do
-  resources :users
+  resources :users do
+    resource :account
+  end
+
   resources :accounts, :addresses, :items, :orders, :order_items
   resources :sessions, only: [:new, :create, :destroy]
 

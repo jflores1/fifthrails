@@ -2,25 +2,23 @@ class AccountsController < ApplicationController
   #before_filter :get_current_user
   before_filter :signed_in_user
 
+  def show
+
+  end
+
   def new
-    if signed_in?
-      @user = current_user
-      @account = @user.accounts.build(params[:account])
-      if @account.save
-        redirect_to user_path(current_user)
-      else
-        render 'new'
-      end
+    @account = current_user.create_account(params[:account])
+    if @account.save
+      redirect_to user_path(current_user)
     else
-      redirect_to signin_path
+      render 'new'
     end
   end
 
   def edit
-    @user = current_user
-    @account = @user.accounts.last
+    @account = current_user.build_account
     if @account.update_attributes(params[:account])
-      flash[:success] = "profile updated!"
+      flash[:success]
       redirect_to user_path(current_user)
     else
       render 'edit'
