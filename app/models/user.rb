@@ -21,9 +21,11 @@
 class User < ActiveRecord::Base
   attr_accessible :email_address, :password, :password_confirmation, :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :work_phone
   has_secure_password
-  has_many :addresses, through: :orders
+  has_many :addresses
   has_many :orders
   has_many :items
+
+  accepts_nested_attributes_for :addresses
 
   before_save {|user| user.email_address = email_address.downcase}
   before_save :create_remember_token
