@@ -4,22 +4,25 @@
 #
 #  id           :integer          not null, primary key
 #  order_date   :datetime
-#  account_id   :integer
 #  order_amount :float
-#  address_id   :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  order_notes  :text
+#  referral     :string(255)
+#  user_id      :integer
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :address_id, :order_date, :order_amount
-  belongs_to :account
+  attr_accessible :order_date, :order_amount, :order_notes, :referral, :addresses_attributes
+  belongs_to :user
   has_many   :addresses
   has_many   :order_items
   has_many   :items, through: :order_items
 
-  validates :address_id, presence:true
-  validates :order_amount, presence: true
+  accepts_nested_attributes_for :addresses, allow_destroy: true
+
+  #validates :order_amount, presence: true
+  validate :order_date, presence: true
   validate :valid_order_date
 
   def valid_order_date

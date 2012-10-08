@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121001205459) do
+ActiveRecord::Schema.define(:version => 20121008005016) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -33,13 +33,14 @@ ActiveRecord::Schema.define(:version => 20121001205459) do
     t.string   "city"
     t.string   "state"
     t.integer  "zip_code"
-    t.integer  "account_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
     t.string   "address_type"
+    t.integer  "user_id"
+    t.integer  "order_id"
   end
 
-  add_index "addresses", ["account_id"], :name => "account_id_ix"
+  add_index "addresses", ["user_id"], :name => "index_addresses_on_user_id"
 
   create_table "items", :force => true do |t|
     t.string   "name"
@@ -47,13 +48,15 @@ ActiveRecord::Schema.define(:version => 20121001205459) do
     t.float    "price"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
-    t.integer  "account_id"
     t.float    "item_length"
     t.float    "item_width"
     t.float    "item_height"
     t.string   "item_status"
     t.text     "item_description"
+    t.integer  "user_id"
   end
+
+  add_index "items", ["user_id"], :name => "index_items_on_user_id"
 
   create_table "order_items", :force => true do |t|
     t.integer  "order_id"
@@ -65,14 +68,15 @@ ActiveRecord::Schema.define(:version => 20121001205459) do
 
   create_table "orders", :force => true do |t|
     t.datetime "order_date"
-    t.integer  "account_id"
     t.float    "order_amount"
-    t.integer  "address_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.text     "order_notes"
     t.string   "referral"
+    t.integer  "user_id"
   end
+
+  add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email_address"
@@ -82,6 +86,12 @@ ActiveRecord::Schema.define(:version => 20121001205459) do
     t.datetime "updated_at",            :null => false
     t.string   "password_digest"
     t.string   "remember_token"
+    t.string   "first_name"
+    t.string   "middle_initial"
+    t.string   "last_name"
+    t.string   "work_phone"
+    t.string   "home_phone"
+    t.string   "cell_phone"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"

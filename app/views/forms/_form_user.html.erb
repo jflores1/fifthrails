@@ -3,6 +3,24 @@
     <%= form_for(@user) do |form| %>
         <%= render 'shared/user_form_error_messages', object: form.object %>
 
+        <%= form.label :first_name, "First Name" %>
+        <%= form.text_field :first_name %>
+
+        <%= form.label :middle_initial, "Middle Initial (optional)" %>
+        <%= form.text_field :middle_initial %>
+
+        <%= form.label :last_name, "Last Name" %>
+        <%= form.text_field :last_name %>
+
+        <%= form.label :home_phone, "Home Phone" %>
+        <%= form.text_field :home_phone %>
+
+        <%= form.label :cell_phone, "Cell Phone" %>
+        <%= form.text_field :cell_phone %>
+
+        <%= form.label :work_phone, "Work Phone" %>
+        <%= form.text_field :work_phone %>
+
         <%= form.label :email_address, "Email Address" %>
         <%= form.text_field :email_address, placeholder: "Email Address" %>
 

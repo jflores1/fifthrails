@@ -1,4 +1,4 @@
-<%= form_for (@account) do |form| %>
+<%= form_for (@account), url: accounts_path,  method: :post do |form| %>
     <%= render 'shared/user_form_error_messages', object: form.object %>
 
     <%= form.label :first_name, "First Name" %>

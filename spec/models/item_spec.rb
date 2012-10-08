@@ -8,12 +8,12 @@
 #  price            :float
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
-#  account_id       :integer
 #  item_length      :float
 #  item_width       :float
 #  item_height      :float
 #  item_status      :string(255)
 #  item_description :text
+#  user_id          :integer
 #
 
 require 'spec_helper'

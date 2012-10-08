@@ -8,19 +8,19 @@
 #  price            :float
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
-#  account_id       :integer
 #  item_length      :float
 #  item_width       :float
 #  item_height      :float
 #  item_status      :string(255)
 #  item_description :text
+#  user_id          :integer
 #
 
 class Item < ActiveRecord::Base
   attr_accessible :name, :item_type, :price, :account_id, :item_length, :item_width, :item_height, :item_status, :item_description
   has_many :order_items
   has_many :orders, through: :order_items
-  belongs_to :account
+  belongs_to :user
 
   before_validation do |item|
     item.item_type = item_type.capitalize

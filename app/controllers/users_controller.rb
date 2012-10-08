@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @order = @user.orders
   end
 
   def new
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      redirect_to new_user_account_path
+      redirect_to user_path(current_user)
     else
       flash[:error] = "Sorry, something went wrong"
       render 'new'

@@ -4,11 +4,12 @@
 #
 #  id           :integer          not null, primary key
 #  order_date   :datetime
-#  account_id   :integer
 #  order_amount :float
-#  address_id   :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  order_notes  :text
+#  referral     :string(255)
+#  user_id      :integer
 #
 
 require 'spec_helper'

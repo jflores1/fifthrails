@@ -8,10 +8,11 @@
 #  city           :string(255)
 #  state          :string(255)
 #  zip_code       :integer
-#  account_id     :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  address_type   :string(255)
+#  user_id        :integer
+#  order_id       :integer
 #
 
 require 'spec_helper'

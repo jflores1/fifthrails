@@ -10,12 +10,18 @@
 #  updated_at            :datetime         not null
 #  password_digest       :string(255)
 #  remember_token        :string(255)
+#  first_name            :string(255)
+#  middle_initial        :string(255)
+#  last_name             :string(255)
+#  work_phone            :string(255)
+#  home_phone            :string(255)
+#  cell_phone            :string(255)
 #
 
 require 'spec_helper'
 
 describe User do
-  before {@user = User.new(email_address:"jesse.flores@me.com", password: "password", password_confirmation: "password")}
+  before {@user = User.new(email_address:"jesse.flores@me.com", password: "password", password_confirmation: "password", first_name:"Jesse", middle_initial:"A", last_name:"Flores", home_phone:"713-817-7622", work_phone:"512-468-7549", cell_phone:"713-817-7622")}
 
   subject {@user}
 
@@ -26,6 +32,12 @@ describe User do
   it {should respond_to(:authenticate)}
   it {should respond_to(:remember_token)}
   it {should respond_to(:addresses)}
+  it {should respond_to(:first_name)}
+  it {should respond_to(:middle_initial)}
+  it {should respond_to(:last_name)}
+  it {should respond_to(:home_phone)}
+  it {should respond_to(:work_phone)}
+  it {should respond_to(:cell_phone)}
 
   it {should be_valid}
 
@@ -83,7 +95,40 @@ describe User do
     it {should_not be_valid}
   end
 
-  it {should respond_to(:authenticate)}
+
+  describe "when first name is not present" do
+    before {@user.first_name = nil}
+    it {should_not be_valid}
+  end
+
+  describe "validation of middle name" do
+    describe "when middle name is not present" do
+      before {@user.middle_initial = nil}
+      it {should be_valid}
+    end
+
+    describe "when middle initial is present, it's just 1 initial" do
+      before {@user.middle_initial = "a" *2}
+      it {should_not be_valid}
+    end
+  end
+
+  describe "phone number validation" do
+    before {@user.home_phone = @user.cell_phone = @user.work_phone = nil}
+    it {should be_valid}
+
+    describe "phone number shouldn't be too long" do
+      before {@user.home_phone = @user.cell_phone = @user.work_phone = "a" * 17}
+      it {should_not be_valid}
+    end
+
+    describe "phone number shouldn't be too short" do
+      before {@user.home_phone = @user.cell_phone = @user.work_phone = "a" * 5}
+      it {should_not be_valid}
+    end
+  end
+
+    it {should respond_to(:authenticate)}
 
   describe "return value of authenticate method" do
     before {@user.save}
@@ -109,42 +154,6 @@ describe User do
   describe "remember token" do
     before {@user.save}
     its(:remember_token) {should_not be_blank}
-  end
-
-  describe "address associations" do
-    before {@user.save}
-    let(:user_address) do
-      FactoryGirl.create(:address, user: @user)
-    end
-
-    it "should exist" do
-      @user.addresses.should_not be_false
-    end
-
-    it "should destroy associated addresses" do
-      addresses = @user.addresses
-      @user.destroy
-      addresses.each do |address|
-        Address.find_by_id(address.id).should be_nil
-      end
-    end
-  end
-
-  describe "Account Associations" do
-    before {@user.save}
-    let(:user_account) do
-      FactoryGirl.create(:accounts, user: @user)
-    end
-
-    it "should exist" do
-      @user.account.should_not be false
-    end
-
-    it "should destroy associated accounts" do
-      account = @user.account
-      @user.destroy
-      Account.find_by_id(account.id).should be_nil
-    end
   end
 
 

@@ -8,15 +8,16 @@
 #  city           :string(255)
 #  state          :string(255)
 #  zip_code       :integer
-#  account_id     :integer
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  address_type   :string(255)
+#  user_id        :integer
+#  order_id       :integer
 #
 
 class Address < ActiveRecord::Base
   attr_accessible :address_line_1, :address_line_2, :city, :state, :zip_code, :address_type
-  belongs_to :account
+  belongs_to :user
   belongs_to :order
 
   before_save {|address| address.address_type = address_type.capitalize}
@@ -25,7 +26,7 @@ class Address < ActiveRecord::Base
   validates :state, length: {is: 2}
   validates :zip_code, length: {is: 5}
 
-  ADDRESS_TYPES = %w[Billing Shipping Both]
+  ADDRESS_TYPES = %w[Delivery Pickup Billing Shipping Both]
   validate :valid_address_type
 
   protected

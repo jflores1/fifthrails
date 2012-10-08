@@ -1,9 +1,5 @@
 Fifthrails::Application.routes.draw do
-  resources :users do
-    resource :account
-  end
-
-  resources :accounts, :addresses, :items, :orders, :order_items
+  resources :users, :addresses, :items, :orders, :order_items
   resources :sessions, only: [:new, :create, :destroy]
 
   root to:'storage_rental#show'

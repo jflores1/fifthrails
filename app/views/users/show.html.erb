@@ -1,6 +1,22 @@
-Hello, User!
+<div class="span12">
+  <h2>Hi, <%= current_user.first_name %>! </h2>
+  <p>Welcome to your account page. From here, you can see items you have in storage, have them delivered, or schedule new pickukps.</p>
+</div>
 
-<ul>
-  <li><%= link_to "Edit Account Info", edit_account_path %></li>
-  <li><%= link_to "Sign Out", signout_path %></li>
-</ul>
+<div class="span8">
+  <%= link_to "Request a Pickup", new_order_path %>
+
+
+</div>
+<div class="span4">
+  <h3>Upcoming Pickups & Deliveries</h3>
+  <%= current_user.order_ids %>
+  <%= current_user.orders %>
+
+</div>
+
+
+
+
+
+
