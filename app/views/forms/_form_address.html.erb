@@ -1,0 +1,25 @@
+<%= form_for @address do |address_form| %>
+
+    <%= address_form.label "Address Line 1" %>
+    <%= address_form.text_field :address_line_1 %>
+
+    <%= address_form.label "Address Line 2" %>
+    <%= address_form.text_field :address_line_2 %>
+
+    <%= address_form.label "City" %>
+    <%= address_form.text_field :city %>
+
+
+    <%= address_form.label "State" %>
+    <%= address_form.text_field :state %>
+
+
+    <%= address_form.label "Zip Code" %>
+    <%= address_form.text_field :zip_code %>
+
+    <%= address_form.label "Address Type" %>
+    <%= address_form.select(:address_type, options_for_select([['Pickup', 'Pickup'],['Delivery', 'Delivery'],['Both', 'Both']],'Pickup'))%>
+
+    <%= address_form.submit "Submit" %>
+
+<% end %>
