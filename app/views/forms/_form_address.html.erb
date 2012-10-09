@@ -20,6 +20,9 @@
     <%= address_form.label "Address Type" %>
     <%= address_form.select(:address_type, options_for_select([['Pickup', 'Pickup'],['Delivery', 'Delivery'],['Both', 'Both']],'Pickup'))%>
 
-    <%= address_form.submit "Submit" %>
+    <div class="">
+      <%= address_form.submit "Schedule Pickup", class:"btn btn-danger" %>
+    </div>
+
 
 <% end %>

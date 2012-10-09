@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008005016) do
+ActiveRecord::Schema.define(:version => 20121009025700) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20121008005016) do
     t.text     "order_notes"
     t.string   "referral"
     t.integer  "user_id"
+    t.integer  "address_id"
   end
 
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"

@@ -1,36 +1,60 @@
-<div class="row">
-  <div class="span6 offset3">
+<div class="row-fluid">
+  <div class="span10 offset2">
     <%= form_for(@user) do |form| %>
         <%= render 'shared/user_form_error_messages', object: form.object %>
 
-        <%= form.label :first_name, "First Name" %>
-        <%= form.text_field :first_name %>
+        <h2>Personal Info</h2>
+            <div class="span4">
+              <%= form.label :first_name, "First Name" %>
+              <%= form.text_field :first_name%>
+            </div>
 
-        <%= form.label :middle_initial, "Middle Initial (optional)" %>
-        <%= form.text_field :middle_initial %>
+            <div class="span4">
+              <%= form.label :middle_initial, "Middle Initial (optional)" %>
+              <%= form.text_field :middle_initial%>
+            </div>
 
-        <%= form.label :last_name, "Last Name" %>
-        <%= form.text_field :last_name %>
+            <div class="span3">
+              <%= form.label :last_name, "Last Name" %>
+              <%= form.text_field :last_name %>
+            </div>
 
-        <%= form.label :home_phone, "Home Phone" %>
-        <%= form.text_field :home_phone %>
+        <h2>Contact Info</h2><p>(we only need one number)</p>
+            <div class="span4">
+              <%= form.label :home_phone, "Home Phone" %>
+              <%= form.text_field :home_phone %>
+            </div>
 
-        <%= form.label :cell_phone, "Cell Phone" %>
-        <%= form.text_field :cell_phone %>
+            <div class="span4">
+              <%= form.label :cell_phone, "Cell Phone" %>
+              <%= form.text_field :cell_phone %>
+            </div>
 
-        <%= form.label :work_phone, "Work Phone" %>
-        <%= form.text_field :work_phone %>
+            <div class="span3">
+              <%= form.label :work_phone, "Work Phone" %>
+              <%= form.text_field :work_phone %>
+            </div>
 
-        <%= form.label :email_address, "Email Address" %>
-        <%= form.text_field :email_address, placeholder: "Email Address" %>
+        <h2>Login Info</h2><p>You'll use your email address to log in to your account.</p>
+            <div class="span10">
+              <%= form.label :email_address, "Email Address" %>
+              <%= form.text_field :email_address, placeholder: "Email Address" %>
+            </div>
 
-        <%= form.label :password, "Password" %>
-        <%= form.password_field :password, placeholder: "Password" %>
+              <div class="span10">
+              <%= form.label :password, "Password" %>
+              <%= form.password_field :password, placeholder: "Password" %>
+              </div>
 
-        <%= form.label :password_confirmation, "Confirm Password" %>
-        <%= form.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+              <div class="span10">
+              <%= form.label :password_confirmation, "Confirm Password" %>
+              <%= form.password_field :password_confirmation, placeholder: "Password Confirmation" %>
+              </div>
 
-        <%= form.submit "Create Account" %>
+
+              <div class="span10">
+              <%= form.submit "Create Account", class:"btn btn-danger" %>
+              </div>
 
     <% end %>
   </div>

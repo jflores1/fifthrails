@@ -15,7 +15,7 @@ class AddressesController < ApplicationController
   def create
     @address = current_user.addresses.build(params[:address])
     if @address.save!
-      redirect_to user_path(current_user)
+      redirect_to new_order_path(current_user)
     else
       render 'new'
     end

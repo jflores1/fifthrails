@@ -13,7 +13,7 @@
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :order_date, :order_amount, :order_notes, :referral, :addresses_attributes
+  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :addresses_attributes
   belongs_to :user
   has_many   :addresses
   has_many   :order_items

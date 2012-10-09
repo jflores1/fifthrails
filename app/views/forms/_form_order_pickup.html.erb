@@ -1,0 +1,23 @@
+<%= form_for @order do |order_form| %>
+
+    <%= order_form.label "When would you like us to pick up your stuff?" %>
+    <%= order_form.text_field :order_date %>
+
+    <%= order_form.label "Where are we picking up?" %>
+    <%= order_form.collection_select(:address_id, @address.all, :id, :address_line_1) %>
+
+    <%= order_form.label "Who referred you?" %>
+    <%= order_form.text_field :referral %>
+
+    <div>
+    <%= order_form.label "Any special instructions?" %>
+    <%= order_form.text_area :order_notes, cols: 10, rows: 3 %>
+    </div>
+
+    <div>
+      <%= order_form.submit "Submit" %>
+    </div>
+
+
+
+<% end %>

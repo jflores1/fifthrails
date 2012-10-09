@@ -1,8 +1,8 @@
 <div class="header-form">
 
   <% if @current_user then %>
-      <p>Hi, <%= @current_user.email_address %>! <%= link_to "Not you?", signout_path %> </p>
+      <p>Hi, <%= @current_user.first_name %>! <%= link_to "Not you?", signout_path %> </p>
   <% else %>
-    <%= render 'forms/form_signin'%>
+    <%= render 'forms/form_inline_signin'%>
   <% end %>
 </div>

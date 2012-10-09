@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = current_user.orders.build
-    1.times {@order.addresses.build}
+    @address = current_user.addresses
   end
 
   def create
