@@ -13,13 +13,11 @@
 #  first_name            :string(255)
 #  middle_initial        :string(255)
 #  last_name             :string(255)
-#  work_phone            :string(255)
-#  home_phone            :string(255)
-#  cell_phone            :string(255)
+#  phone_number          :string(255)
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email_address, :password, :password_confirmation, :cell_phone, :first_name, :home_phone, :last_name, :middle_initial, :work_phone
+  attr_accessible :email_address, :password, :password_confirmation, :phone_number, :first_name, :last_name, :middle_initial
   has_secure_password
   has_many :addresses
   has_many :orders
@@ -32,9 +30,7 @@ class User < ActiveRecord::Base
 
   #strip digits and return string of numbers
   before_save do |account|
-    account.cell_phone = cell_phone.gsub(/\D/,'')
-    account.home_phone = home_phone.gsub(/\D/,'')
-    account.work_phone = work_phone.gsub(/\D/,'')
+    account.phone_number = phone_number.gsub(/\D/,'')
   end
 
   before_save do |account|
@@ -54,7 +50,7 @@ class User < ActiveRecord::Base
   validates :first_name, presence:true
   validates :last_name, presence:true
   validates :middle_initial, length:  {is: 1}, allow_blank: true
-  validates :cell_phone, :home_phone, :work_phone, length: {in: 7..16}, allow_blank: true
+  validates :phone_number, length: {in: 7..16}
 
   private
 

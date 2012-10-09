@@ -1,27 +1,50 @@
 <%= form_for @address do |address_form| %>
 
-    <%= address_form.label "Address Line 1" %>
-    <%= address_form.text_field :address_line_1 %>
+    <div class="span12">
+      <div class="span3">
+        <%= address_form.label "Address Line 1" %>
+        <%= address_form.text_field :address_line_1 %>
+      </div>
 
-    <%= address_form.label "Address Line 2" %>
-    <%= address_form.text_field :address_line_2 %>
+      <div class="span3">
+        <%= address_form.label "Address Line 2" %>
+        <%= address_form.text_field :address_line_2 %>
+      </div>
+    </div>
 
-    <%= address_form.label "City" %>
-    <%= address_form.text_field :city %>
+    <div class="span12">
+      <div class="span3">
+        <%= address_form.label "City" %>
+        <%= address_form.text_field :city %>
+      </div>
 
+      <div class="span3">
+        <%= address_form.label "State" %>
+        <%= address_form.text_field :state %>
+      </div>
 
-    <%= address_form.label "State" %>
-    <%= address_form.text_field :state %>
+      <div class="span4">
+        <%= address_form.label "Zip Code" %>
+        <%= address_form.text_field :zip_code %>
+      </div>
+    </div>
 
+    <div class="span12">
+      <div class="span3">
+        <%= address_form.label "Nickname (to save for later)" %>
+        <%= address_form.text_field :nickname, placeholder: "Home" %>
+      </div>
 
-    <%= address_form.label "Zip Code" %>
-    <%= address_form.text_field :zip_code %>
+      <div class="span3">
+        <%= address_form.label "Address Type" %>
+        <%= address_form.select(:address_type, options_for_select([['Pickup', 'Pickup'],['Delivery', 'Delivery'],['Both', 'Both']],'Pickup'))%>
+      </div>
+    </div>
 
-    <%= address_form.label "Address Type" %>
-    <%= address_form.select(:address_type, options_for_select([['Pickup', 'Pickup'],['Delivery', 'Delivery'],['Both', 'Both']],'Pickup'))%>
-
-    <div class="">
-      <%= address_form.submit "Schedule Pickup", class:"btn btn-danger" %>
+    <div class="span12">
+      <div class="span3">
+        <%= address_form.submit "Schedule Pickup", class:"btn btn-danger" %>
+      </div>
     </div>
 
 

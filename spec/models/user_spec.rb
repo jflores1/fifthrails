@@ -13,9 +13,7 @@
 #  first_name            :string(255)
 #  middle_initial        :string(255)
 #  last_name             :string(255)
-#  work_phone            :string(255)
-#  home_phone            :string(255)
-#  cell_phone            :string(255)
+#  phone_number          :string(255)
 #
 
 require 'spec_helper'

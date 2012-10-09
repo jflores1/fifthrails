@@ -13,10 +13,11 @@
 #  address_type   :string(255)
 #  user_id        :integer
 #  order_id       :integer
+#  nickname       :string(255)
 #
 
 class Address < ActiveRecord::Base
-  attr_accessible :address_line_1, :address_line_2, :city, :state, :zip_code, :address_type
+  attr_accessible :address_line_1, :address_line_2, :city, :state, :zip_code, :address_type, :nickname
   belongs_to :user
   belongs_to :order
 
@@ -25,6 +26,7 @@ class Address < ActiveRecord::Base
   validates :address_line_1, :city, :state, :zip_code, :address_type, presence: true
   validates :state, length: {is: 2}
   validates :zip_code, length: {is: 5}
+  validates :nickname, presence: true
 
   ADDRESS_TYPES = %w[Delivery Pickup Billing Shipping Both]
   validate :valid_address_type

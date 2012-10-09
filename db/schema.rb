@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009025700) do
+ActiveRecord::Schema.define(:version => 20121009141057) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20121009025700) do
     t.string   "address_type"
     t.integer  "user_id"
     t.integer  "order_id"
+    t.string   "nickname"
   end
 
   add_index "addresses", ["user_id"], :name => "index_addresses_on_user_id"
@@ -90,9 +91,7 @@ ActiveRecord::Schema.define(:version => 20121009025700) do
     t.string   "first_name"
     t.string   "middle_initial"
     t.string   "last_name"
-    t.string   "work_phone"
-    t.string   "home_phone"
-    t.string   "cell_phone"
+    t.string   "phone_number"
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"

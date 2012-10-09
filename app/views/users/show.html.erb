@@ -10,8 +10,10 @@
 </div>
 <div class="span4">
   <h3>Upcoming Pickups & Deliveries</h3>
-  <%= current_user.order_ids %>
-  <%= current_user.orders %>
+
+  <% current_user.orders.each do |order| %>
+      <%= order.order_date %>
+  <% end %>
 
 </div>
 

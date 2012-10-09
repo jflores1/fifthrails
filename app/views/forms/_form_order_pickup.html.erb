@@ -4,7 +4,7 @@
     <%= order_form.text_field :order_date %>
 
     <%= order_form.label "Where are we picking up?" %>
-    <%= order_form.collection_select(:address_id, @address.all, :id, :address_line_1) %>
+    <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %>
 
     <%= order_form.label "Who referred you?" %>
     <%= order_form.text_field :referral %>
@@ -15,9 +15,7 @@
     </div>
 
     <div>
-      <%= order_form.submit "Submit" %>
+      <%= order_form.submit "Complete Order", class:"btn btn-danger" %>
     </div>
-
-
 
 <% end %>

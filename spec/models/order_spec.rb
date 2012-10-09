@@ -10,6 +10,7 @@
 #  order_notes  :text
 #  referral     :string(255)
 #  user_id      :integer
+#  address_id   :integer
 #
 
 require 'spec_helper'

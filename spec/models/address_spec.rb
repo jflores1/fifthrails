@@ -13,6 +13,7 @@
 #  address_type   :string(255)
 #  user_id        :integer
 #  order_id       :integer
+#  nickname       :string(255)
 #
 
 require 'spec_helper'
