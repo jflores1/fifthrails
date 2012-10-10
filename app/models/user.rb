@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
   attr_accessible :email_address, :password, :password_confirmation, :phone_number, :first_name, :last_name, :middle_initial
   has_secure_password
   has_many :addresses
-  has_many :orders
+  has_many :orders, include: :addresses
   has_many :items
 
   accepts_nested_attributes_for :addresses
