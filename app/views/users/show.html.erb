@@ -12,7 +12,7 @@
   <h3>Upcoming Pickups & Deliveries</h3>
 
   <% current_user.orders.each do |order| %>
-      <%= order.address_nickname %>
+      <%= @address.nickname %><br/>
       <%= order.order_date %>
   <% end %>
 

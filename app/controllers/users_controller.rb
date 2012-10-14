@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @order = @user.orders
+    @address = Address.joins(@order).where(:id => @order.address_id)
   end
 
   def new
@@ -49,15 +50,5 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-  private
-
-  #def signed_in_user
-  #  redirect_to signin_url, notice: "Please sign in." unless signed_in?
-  #end
-  #
-  #def correct_user
-  #  @user = User.find(params[:id])
-  #  redirect_to(root_path) unless current_user?(@user)
-  #end
 
 end

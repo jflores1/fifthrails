@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = current_user.orders.build
-    @address = @order.addresses
+    @address = current_user.addresses
   end
 
   def create
@@ -32,10 +32,6 @@ class OrdersController < ApplicationController
     else
       render 'edit'
     end
-  end
-
-  def address_nickname
-    Address.joins(:orders).where(:id == order.addres_id)
   end
 
 end
