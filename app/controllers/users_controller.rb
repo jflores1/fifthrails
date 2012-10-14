@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @order = @user.orders
-    @address = Address.joins(@order).where(:id => @order.address_id)
   end
 
   def new

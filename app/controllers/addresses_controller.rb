@@ -1,7 +1,7 @@
 class AddressesController < ApplicationController
 
   def index
-    @address = Address.find
+    @address = current_user.addresses.all
   end
 
   def show

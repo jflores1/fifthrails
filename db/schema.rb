@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009141057) do
+ActiveRecord::Schema.define(:version => 20121014221638) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(:version => 20121009141057) do
     t.string   "referral"
     t.integer  "user_id"
     t.integer  "address_id"
+    t.string   "order_type"
   end
 
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
@@ -84,14 +85,15 @@ ActiveRecord::Schema.define(:version => 20121009141057) do
     t.string   "email_address"
     t.string   "password"
     t.string   "password_confirmation"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "password_digest"
     t.string   "remember_token"
     t.string   "first_name"
     t.string   "middle_initial"
     t.string   "last_name"
     t.string   "phone_number"
+    t.boolean  "admin",                 :default => false
   end
 
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"

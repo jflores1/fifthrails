@@ -11,6 +11,7 @@
 #  referral     :string(255)
 #  user_id      :integer
 #  address_id   :integer
+#  order_type   :string(255)
 #
 
 require 'spec_helper'

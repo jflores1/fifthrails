@@ -38,7 +38,6 @@ class Item < ActiveRecord::Base
 
   validates :name, presence: true
   validates :item_type, presence: true
-  validates :account_id, presence: true, allow_blank: true, allow_nil: true
   validates :item_status, presence: true, allow_blank: true, allow_nil:true
 
   validate :valid_item_type
@@ -51,4 +50,8 @@ class Item < ActiveRecord::Base
   def valid_item_status
     errors.add(:item_status, "Sorry, that's not a valid status!") unless VALID_ITEM_STATUS.include? item_status
   end
+
+  #scope
+  scope :stored, where(:item_status => "Stored")
+  scope :with_customer, where(:item_status => "Customer")
 end

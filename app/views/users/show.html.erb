@@ -3,20 +3,34 @@
   <p>Welcome to your account page. From here, you can see items you have in storage, have them delivered, or schedule new pickukps.</p>
 </div>
 
-<div class="span8">
-  <%= link_to "Request a Pickup", new_order_path, class:"btn btn-danger" %>
+  <div class="span8">
+    <%= link_to "Schedule a Pickup", new_order_path, class:"btn btn-danger" %>
+    <%= link_to "Create Address", new_address_path %>
 
 
-</div>
-<div class="span4">
-  <h3>Upcoming Pickups & Deliveries</h3>
+  </div>
 
-  <% current_user.orders.each do |order| %>
-      <%= @address.nickname %><br/>
-      <%= order.order_date %>
+  <div class="span4">
+    <h3>Upcoming Pickups & Deliveries</h3>
+
+    <%= render 'user_upcoming_orders' %>
+
+  </div>
+
+<div class="span12">
+  <h3>Items Stored</h3>
+  <% current_user.items.stored.each do |item| %>
+        <%= item.name %>
+        <%= item.price %><br/>
   <% end %>
 
+  <h3>Items Returned</h3>
+
+  <% current_user.items.with_customer.each do |item| %>
+        <%= item.name %>
+  <% end %>
 </div>
+
 
 
 

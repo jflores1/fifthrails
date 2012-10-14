@@ -1,0 +1,15 @@
+<%= form_for @item do |item| %>
+
+    <%= item.text_field :name, placeholder: "Item Name" %>
+    <%= item.hidden_field :item_type, value: "Customer" %>
+    <%= item.text_field :price, placeholder: "Price" %>
+    <%= item.text_field :item_length, placeholder: "Length" %>
+    <%= item.text_field :item_width, placeholder: "Width" %>
+    <%= item.text_field :item_height, placeholder: "Height" %>
+    <%= item.text_field :item_status, placeholder: "Status" %>
+    <%= item.text_field :item_description, placholder: "Description" %>
+
+    <%= item.submit "Submit" %>
+
+
+<% end %>

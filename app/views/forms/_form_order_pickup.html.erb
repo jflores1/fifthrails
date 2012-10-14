@@ -1,5 +1,7 @@
 <%= form_for @order do |order_form| %>
 
+    <%= order_form.hidden_field :order_type, value: "Pickup" %>
+
     <%= order_form.label "When would you like us to pick up your stuff?" %>
     <%= order_form.text_field :order_date %>
 

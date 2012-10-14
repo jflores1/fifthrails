@@ -5,6 +5,7 @@ Fifthrails::Application.routes.draw do
   resources :users do
     resources :addresses
     resources :orders
+    resources :items
   end
 
   root to:'storage_rental#show'
