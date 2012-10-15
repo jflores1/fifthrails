@@ -15,11 +15,13 @@
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :addresses_attributes
+  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :addresses_attributes, :order_items_attributes
   belongs_to :user
   has_many   :addresses
   has_many   :order_items
   has_many   :items, through: :order_items
+
+  accepts_nested_attributes_for :order_items, allow_destroy: true
 
   ORDER_TYPES = %w[Pickup Delivery]
 

@@ -11,11 +11,11 @@
 #
 
 class OrderItem < ActiveRecord::Base
-  attr_accessible :item_id, :quantity
+  attr_accessible :item_id, :quantity, :order_id
   belongs_to :order
   belongs_to :item
 
   validates :item, presence: true
-  validates :quantity, presence: true
+  validates :quantity, presence: true, allow_blank: true
 
 end

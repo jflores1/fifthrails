@@ -6,6 +6,11 @@ Fifthrails::Application.routes.draw do
     resources :addresses
     resources :orders
     resources :items
+    resources :order_items
+  end
+
+  resources :orders do
+    resources :order_items
   end
 
   root to:'storage_rental#show'

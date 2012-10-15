@@ -1,0 +1,28 @@
+<%= form_for @order do |order_form| %>
+
+
+    <%= order_form.hidden_field :order_type, value: "Delivery" %>
+
+    <%= order_form.label "When would you like us to deliver your stuff?" %>
+    <%= order_form.text_field :order_date %>
+
+    <%= order_form.label "Where are we delivering?" %>
+    <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %><br/>
+
+        <%= order_form.fields_for :order_items do |order_item_form| %>
+
+            <% current_user.items.each do |item| %>
+
+
+                <%= order_item_form.label item.name %>
+                <%= check_box_tag("order_item[item_ids][]", item.id) %>
+            <% end %>
+
+        <% end %>
+
+    <div>
+      <%= order_form.submit "Complete Order", class:"btn btn-danger" %>
+    </div>
+
+
+<% end %>
