@@ -16,6 +16,6 @@ class OrderItem < ActiveRecord::Base
   belongs_to :item
 
   validates :item, presence: true
-  validates :quantity, presence: true, allow_blank: true
+  #validates :quantity, presence: true, :allow_blank => true
 
 end

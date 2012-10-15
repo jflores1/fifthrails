@@ -9,16 +9,11 @@
     <%= order_form.label "Where are we delivering?" %>
     <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %><br/>
 
-        <%= order_form.fields_for :order_items do |order_item_form| %>
-
-            <% current_user.items.each do |item| %>
-
-
-                <%= order_item_form.label item.name %>
-                <%= check_box_tag("order_item[item_ids][]", item.id) %>
-            <% end %>
-
-        <% end %>
+    <%= hidden_field_tag "order[item_ids][]" %>
+    <% current_user.items.all.each do |item_form| %>
+        <%= check_box_tag "order[item_ids][]", item_form.id, @order.item_ids.include?(item_form.id) %>
+        <%= label_tag item_form.name %>
+    <% end %>
 
     <div>
       <%= order_form.submit "Complete Order", class:"btn btn-danger" %>

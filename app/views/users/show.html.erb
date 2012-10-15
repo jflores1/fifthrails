@@ -1,36 +1,37 @@
-<div class="span12">
-  <h2>Hi, <%= current_user.first_name %>! </h2>
-  <p>Welcome to your account page. From here, you can see items you have in storage, have them delivered, or schedule new pickukps.</p>
+<div class="row-fluid">
+  <div class="span12">
+    <h2>Hi, <%= current_user.first_name %>! </h2>
+    <p>Welcome to your account page. From here, you can see items you have in storage, have them delivered, or schedule new pickukps.</p>
+  </div>
 </div>
-
-  <div class="span8">
+<div class="row-fluid">
+  <div class="span12">
     <%= link_to "Schedule a Pickup", new_order_path, class:"btn btn-danger" %>
-    <%= link_to "Schedule a Delivery", new_order_item_path, class: "btn btn-danger"%>
-    <%= link_to "Create Address", new_address_path %>
-
-
+    <% if current_user.items.stored.count > 0 %>
+        <%= link_to "Schedule a Delivery", new_order_item_path, class: "btn btn-danger"%>
+    <% end %>
   </div>
-
-  <div class="span4">
-    <h3>Upcoming Pickups & Deliveries</h3>
-
-    <%= render 'user_upcoming_orders' %>
-
-  </div>
-
-<div class="span12">
-  <h3>Items Stored</h3>
-  <% current_user.items.stored.each do |item| %>
-        <%= item.name %>
-        <%= item.price %><br/>
-  <% end %>
-
-  <h3>Items Returned</h3>
-
-  <% current_user.items.with_customer.each do |item| %>
-        <%= item.name %>
-  <% end %>
 </div>
+
+<div class="row-fluid" style="margin-top: 30px;">
+  <div class="span12">
+    <div class="span8">
+      <h3>Stored Items</h3>
+
+      <% if current_user.items.stored.count > 0 %>
+        <%= render 'users/users_stored_items' %>
+      <% else %>
+        <p>You don't have any items stored right now.</p>
+      <% end %>
+
+    </div>
+    <div class="span3">
+      <h3>Upcoming Pickups & Deliveries</h3>
+        <%= render 'user_upcoming_orders' %>
+    </div>
+  </div>
+</div>
+
 
 
 

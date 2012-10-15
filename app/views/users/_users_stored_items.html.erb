@@ -1,0 +1,18 @@
+<% current_user.items.stored.each do |item| %>
+    <table class="table table-hover">
+      <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Storage Rate</th>
+        <th>Item Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><%= item.name %></td>
+        <td>$<%= item.price %></td>
+        <td><%= item.item_status %></td>
+      </tr>
+      </tbody>
+    </table>
+<% end %>

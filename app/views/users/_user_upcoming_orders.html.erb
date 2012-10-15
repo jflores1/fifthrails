@@ -11,6 +11,9 @@
     <% current_user.orders.delivery.each do |order| %>
         <strong><%= order.nickname[order.address_id] %></strong><br/>
         <%= order.order_date.strftime("%A, %B %d") %><br/>
+        <% order.items.each do |show_item| %>
+            <%= show_item.name  %>
+        <% end %>
 
     <% end %>
 
