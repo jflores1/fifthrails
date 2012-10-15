@@ -1,15 +1,18 @@
-<%= form_for @item do |item| %>
+<%= form_for [:user, @item] do |item_form| %>
 
-    <%= item.text_field :name, placeholder: "Item Name" %>
-    <%= item.hidden_field :item_type, value: "Customer" %>
-    <%= item.text_field :price, placeholder: "Price" %>
-    <%= item.text_field :item_length, placeholder: "Length" %>
-    <%= item.text_field :item_width, placeholder: "Width" %>
-    <%= item.text_field :item_height, placeholder: "Height" %>
-    <%= item.text_field :item_status, placeholder: "Status" %>
-    <%= item.text_field :item_description, placholder: "Description" %>
+    <%= item_form.text_field :name, placeholder: "Item Name" %>
+    <%= item_form.hidden_field :item_type, value: "Customer" %>
+    <%= item_form.text_field :price, placeholder: "Price" %>
+    <%= item_form.text_field :item_length, placeholder: "Length" %>
+    <%= item_form.text_field :item_width, placeholder: "Width" %>
+    <%= item_form.text_field :item_height, placeholder: "Height" %>
+    <%= item_form.text_field :item_status, placeholder: "Status" %>
+    <%= item_form.text_field :item_description, placholder: "Description" %>
 
-    <%= item.submit "Submit" %>
+    <%= item_form.submit "Submit" %>
 
 
 <% end %>
+
+<%= @user.email_address %>
+<%= @user.id %>

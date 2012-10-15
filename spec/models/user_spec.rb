@@ -14,6 +14,7 @@
 #  middle_initial        :string(255)
 #  last_name             :string(255)
 #  phone_number          :string(255)
+#  admin                 :boolean          default(FALSE)
 #
 
 require 'spec_helper'

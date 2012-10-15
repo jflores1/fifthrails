@@ -14,6 +14,7 @@
 #  middle_initial        :string(255)
 #  last_name             :string(255)
 #  phone_number          :string(255)
+#  admin                 :boolean          default(FALSE)
 #
 
 class User < ActiveRecord::Base
@@ -51,6 +52,9 @@ class User < ActiveRecord::Base
   validates :last_name, presence:true
   validates :middle_initial, length:  {is: 1}, allow_blank: true
   validates :phone_number, length: {in: 7..16}
+
+  #scope
+  scope :admin, where(:admin => true)
 
   private
 

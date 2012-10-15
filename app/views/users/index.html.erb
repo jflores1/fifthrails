@@ -1,0 +1,7 @@
+<% @user.each do |user| %>
+   <%= user.first_name %>
+   <%= user.last_name %>
+   <%= link_to "Add Item", new_user_item_path(user) %>
+    <br/>
+
+<% end %>

@@ -1,22 +1,29 @@
 class ItemsController < ApplicationController
+  before_filter :authorize, except: [:index, :show]
 
   def index
 
   end
 
   def show
+    @user = User.find(params[:id])
+    @item = @user.items.all
 
   end
 
   def new
-    @item = current_user.items.build
+    @user = User.find(params[:user_id])
+    @item = @user.items.build
   end
 
   def create
-    @item = current_user.items.create(params[:item])
+    @user = User.find(params[:user_id])
+    @item = @user.items.build(params[:item])
     if @item.save!
-      redirect_to user_path(current_user)
+      flash[:success]
+      redirect_to '/users'
     else
+      flash[:error]
       render 'new'
     end
 
@@ -28,6 +35,11 @@ class ItemsController < ApplicationController
 
   def update
 
+  end
+
+  private
+  def found_user
+    found_user = User.find(params[:user_id])
   end
 
 

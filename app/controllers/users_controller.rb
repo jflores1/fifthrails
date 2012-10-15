@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index, :edit, :update, :destroy]
+  before_filter :signed_in_user, only: [:edit, :update, :destroy]
   before_filter :correct_user,   only: [:edit, :update]
+  before_filter :admin?, only:[:index, :show]
+
+  def index
+    @user = User.all
+  end
 
   def show
     @user = User.find(params[:id])
@@ -47,6 +52,11 @@ class UsersController < ApplicationController
     User.find(params[:id]).destroy
     flash[:success] = "User deleted"
     redirect_to users_url
+  end
+
+  def make_admin(user)
+    user = User.find(params[:id])
+    user.toggle!(:admin)
   end
 
 
