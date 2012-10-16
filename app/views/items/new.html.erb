@@ -1,18 +1,5 @@
-<%= form_for [:user, @item] do |item_form| %>
+<h2>Add a New Item for:<br/></h2>
+<h3><%= @user.first_name %> <%=  @user.last_name %></h3>
 
-    <%= item_form.text_field :name, placeholder: "Item Name" %>
-    <%= item_form.hidden_field :item_type, value: "Customer" %>
-    <%= item_form.text_field :price, placeholder: "Price" %>
-    <%= item_form.text_field :item_length, placeholder: "Length" %>
-    <%= item_form.text_field :item_width, placeholder: "Width" %>
-    <%= item_form.text_field :item_height, placeholder: "Height" %>
-    <%= item_form.text_field :item_status, placeholder: "Status" %>
-    <%= item_form.text_field :item_description, placholder: "Description" %>
-
-    <%= item_form.submit "Submit" %>
-
-
-<% end %>
-
-<%= @user.email_address %>
-<%= @user.id %>
+<%= render 'forms/form_item' %>
+<%= link_to 'Finished Adding Items', '/users', class:"btn btn-danger" %>

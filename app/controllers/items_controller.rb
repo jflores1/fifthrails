@@ -1,8 +1,9 @@
 class ItemsController < ApplicationController
-  before_filter :authorize, except: [:index, :show]
+  before_filter :authorize, except: [:show]
 
   def index
-
+    @user = User.find(params[:user_id])
+    @item = @user.items.all
   end
 
   def show
@@ -21,10 +22,10 @@ class ItemsController < ApplicationController
     @item = @user.items.build(params[:item])
     if @item.save!
       flash[:success]
-      redirect_to '/users'
+      redirect_to new_user_item_path(@user)
     else
       flash[:error]
-      render 'new'
+      render '/users'
     end
 
   end
@@ -35,6 +36,13 @@ class ItemsController < ApplicationController
 
   def update
 
+  end
+
+  def destroy
+    @user = User.find(params[:user_id])
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to user_items_path(@user)
   end
 
   private

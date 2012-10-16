@@ -1,0 +1,28 @@
+<%= form_for [:user, @item] do |item_form| %>
+
+    <%= item_form.label :name, "Item Name" %>
+    <%= item_form.text_field :name, placeholder: "Item Name" %>
+
+    <%= item_form.hidden_field :item_type, value: "Customer" %>
+
+    <%= item_form.label :price, "Monthly Rent" %>
+    <%= item_form.text_field :price, placeholder: "$0.00" %>
+
+    <%= item_form.label :item_length, "Item Length" %>
+    <%= item_form.text_field :item_length, placeholder: "Length" %>
+
+    <%= item_form.label :item_width, "Item Width" %>
+    <%= item_form.text_field :item_width, placeholder: "Width" %>
+
+    <%= item_form.label :item_height, "Item Height" %>
+    <%= item_form.text_field :item_height, placeholder: "Height" %>
+
+    <%= item_form.label :item_status %>
+    <%= item_form.select(:item_status, options_for_select([['Customer', 'Customer'],['Stored', 'Stored'],['In transit', 'In transit'],['Out for delivery', 'Out for delivery']],'Stored'))%>
+
+    <%= item_form.label :item_description, "Item Description" %>
+    <%= item_form.text_field :item_description, placholder: "Description" %><br/>
+
+    <%= item_form.submit "Add Item", class:"btn btn-danger" %>
+
+<% end %>

@@ -1,23 +1,7 @@
-<%= form_for @order do |order_form| %>
-
-
-    <%= order_form.hidden_field :order_type, value: "Delivery" %>
-
-    <%= order_form.label "When would you like us to deliver your stuff?" %>
-    <%= order_form.text_field :order_date %>
-
-    <%= order_form.label "Where are we delivering?" %>
-    <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %><br/>
-
-    <%= hidden_field_tag "order[item_ids][]" %>
-    <% current_user.items.all.each do |item_form| %>
-        <%= check_box_tag "order[item_ids][]", item_form.id, @order.item_ids.include?(item_form.id) %>
-        <%= label_tag item_form.name %>
-    <% end %>
-
-    <div>
-      <%= order_form.submit "Complete Order", class:"btn btn-danger" %>
-    </div>
-
-
-<% end %>
+<div class="row-fluid">
+  <h2>Delivery Details</h2>
+  <div class="span9 offset3">
+    <%= render 'forms/form_order_delivery' %>
+    <%= link_to "Back", user_path(current_user), class: "btn btn-danger" %>
+  </div>
+</div>

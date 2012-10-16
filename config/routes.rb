@@ -1,5 +1,5 @@
 Fifthrails::Application.routes.draw do
-  resources :users, :addresses, :items, :orders, :order_items
+  resources :users, :addresses, :items, :orders, :order_items, :admin
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
@@ -20,6 +20,10 @@ Fifthrails::Application.routes.draw do
   match '/signout', to: 'sessions#destroy'
 
   resources :storage_rental do
+
+  end
+
+  resources :admin do
 
   end
 

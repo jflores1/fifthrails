@@ -7,6 +7,7 @@
 <div class="row-fluid">
   <div class="span12">
     <%= link_to "Schedule a Pickup", new_order_path, class:"btn btn-danger" %>
+    <%= link_to "add address", new_address_path %>
     <% if current_user.items.stored.count > 0 %>
         <%= link_to "Schedule a Delivery", new_order_item_path, class: "btn btn-danger"%>
     <% end %>

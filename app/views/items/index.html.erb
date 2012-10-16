@@ -1,0 +1,29 @@
+<h2>Items for:</h2>
+<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Item Name</th>
+    <th>Item Status</th>
+    <th>Monthly Rent</th>
+    <th>Item Length</th>
+    <th>Item Width</th>
+    <th>Item Height</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @item.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.item_status %></td>
+        <td><%= item.price %></td>
+        <td><%= item.item_length %></td>
+        <td><%= item.item_width %></td>
+        <td><%= item.item_height %></td>
+      </tr>
+
+  <% end %>
+
+  </tbody>
+</table>

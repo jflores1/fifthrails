@@ -1,7 +1,26 @@
-<% @user.each do |user| %>
-   <%= user.first_name %>
-   <%= user.last_name %>
-   <%= link_to "Add Item", new_user_item_path(user) %>
-    <br/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Email Address</th>
+      <th>Phone Number</th>
+      <th>Addresses</th>
+      <th>Items</th>
+      <th>Orders</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.each do |user| %>
+        <tr>
+          <td><%= user.first_name %> <%= user.last_name %></td>
+          <td><%= user.email_address %></td>
+          <td><%= user.phone_number %></td>
+          <td><%= user.addresses.count %></td>
+          <td><%= link_to user.items.count, user_items_path(user) %> (<%= link_to "Add item", new_user_item_path(user) %>) </td>
+          <td><%= user.orders.count %></td>
+        </tr>
 
-<% end %>
+    <% end %>
+
+  </tbody>
+</table>

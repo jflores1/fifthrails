@@ -3,7 +3,7 @@
     <%= order_form.hidden_field :order_type, value: "Pickup" %>
 
     <%= order_form.label "When would you like us to pick up your stuff?" %>
-    <%= order_form.text_field :order_date %>
+    <%= order_form.text_field :order_date, placeholder:"yyyy-mm-dd" %>
 
     <%= order_form.label "Where are we picking up?" %>
     <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %>
