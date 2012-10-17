@@ -56,6 +56,12 @@ class User < ActiveRecord::Base
   #scope
   scope :admin, where(:admin => true)
 
+
+  #class methods
+  def make_admin
+    self.toggle!(:admin)
+  end
+
   private
 
   def create_remember_token

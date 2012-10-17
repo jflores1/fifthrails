@@ -1,0 +1,5 @@
+<h2>Addresses for:</h2>
+<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+<%= link_to "Add a new address", new_user_address_path(@user) %>
+
+<%= render 'users_addresses' %>

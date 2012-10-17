@@ -1,39 +1,54 @@
 class AddressesController < ApplicationController
+  before_filter :get_user
+
+  def get_user
+    if current_user.admin?
+      @user = User.find(params[:user_id])
+    else
+      @user = current_user
+    end
+  end
 
   def index
-    @address = current_user.addresses.all
+    @address = @user.addresses.all
   end
 
   def show
-    @address = Address.find(params[:id])
+    @address = @user.addresses.find(params[:id])
   end
 
   def new
-    @address = current_user.addresses.build
+    @address = @user.addresses.build
   end
 
   def create
-    @address = current_user.addresses.build(params[:address])
-    if @address.save! && current_user.addresses.first
-      redirect_to new_order_path(current_user)
+    @address = @user.addresses.build(params[:address])
+    if @address.save! && @user.addresses.count == 1 #this needs to be scoped out and moved to model.
+      redirect_to new_order_path(@user)
     elsif @address.save!
-      redirect_to user_path(current_user)
+      redirect_to user_path(@user)
     else
       render 'new'
     end
   end
 
   def edit
-    @address = current_user.addresses.build(params[:id])
+    @address = @user.addresses.find(params[:id])
   end
 
   def update
-    @address = current_user.addresses.build(params[:address])
+    @address = @user.addresses.find(params[:id])
     if @address.update_attributes(params[:address])
-      redirect_to user_path(current_user)
+      redirect_to user_addresses_path(@user)
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @address = @user.addresses.find(params[:id])
+    @address.destroy
+    redirect_to user_addresses_path(@user)
   end
 
 end

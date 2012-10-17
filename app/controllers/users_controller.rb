@@ -4,12 +4,13 @@ class UsersController < ApplicationController
   before_filter :admin?, only:[:index, :show]
 
   def index
-    @user = User.all
+    @user = User.includes(:items).all
   end
 
   def show
     @user = User.find(params[:id])
     @order = @user.orders
+    @item = @user.items.all
   end
 
   def new
@@ -54,10 +55,6 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
-  def make_admin(user)
-    user = User.find(params[:id])
-    user.toggle!(:admin)
-  end
 
 
 end

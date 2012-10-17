@@ -1,4 +1,4 @@
-<%= form_for [:user, @item] do |item_form| %>
+<%= form_for [@user, @item] do |item_form| %>
 
     <%= item_form.label :name, "Item Name" %>
     <%= item_form.text_field :name, placeholder: "Item Name" %>
