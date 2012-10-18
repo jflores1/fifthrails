@@ -1,14 +1,14 @@
 <h3>Pickups</h3>
-<% current_user.orders.pickup.each do |order| %>
+<% @user.orders.pickup.each do |order| %>
     <strong><%= order.nickname[order.address_id] %></strong><br/>
     <%= order.order_date.strftime("%A, %B %d") %><br/>
 
 <% end %>
 
-<% unless current_user.orders.delivery.count == 0 %>
+<% unless @user.orders.delivery.count == 0 %>
 
     <h3>Deliveries</h3>
-    <% current_user.orders.delivery.each do |order| %>
+    <% @user.orders.delivery.each do |order| %>
         <strong><%= order.nickname[order.address_id] %></strong><br/>
         <%= order.order_date.strftime("%A, %B %d") %><br/>
         <% order.items.each do |show_item| %>

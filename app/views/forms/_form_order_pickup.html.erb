@@ -1,12 +1,12 @@
-<%= form_for @order do |order_form| %>
+<%= form_for [@user, @order] do |order_form| %>
 
     <%= order_form.hidden_field :order_type, value: "Pickup" %>
 
     <%= order_form.label "When would you like us to pick up your stuff?" %>
-    <%= order_form.text_field :order_date, placeholder:"yyyy-mm-dd" %>
+    <%= order_form.text_field :order_date, placeholder: "yyyy-mm-dd" %>
 
     <%= order_form.label "Where are we picking up?" %>
-    <%= order_form.collection_select(:address_id, @address.all, :id, :nickname) %>
+    <%= order_form.collection_select(:address_id, @user.addresses.all, :id, :nickname) %>
 
     <%= order_form.label "Who referred you?" %>
     <%= order_form.text_field :referral %>

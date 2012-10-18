@@ -1,0 +1,30 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Address Name</th>
+    <th>Address Line 1</th>
+    <th>Address Line 2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip Code</th>
+    <th>Address Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @address.each do |address| %>
+      <tr>
+        <td><%= address.nickname %></td>
+        <td><%= address.address_line_1 %></td>
+        <td><%= address.address_line_2 %></td>
+        <td><%= address.city %></td>
+        <td><%= address.state %></td>
+        <td><%= address.zip_code %></td>
+        <td><%= address.address_type %></td>
+        <td><%= link_to "Edit Address", edit_user_address_path(@user, address) %></td>
+        <td><%= link_to "Delete Address", [@user, address], method: :delete %></td>
+      </tr>
+
+  <% end %>
+
+  </tbody>
+</table>

@@ -1,28 +1,29 @@
 class ItemsController < ApplicationController
+  before_filter :get_user
   before_filter :authorize, except: [:show]
 
-  def index
+
+  def get_user
     @user = User.find(params[:user_id])
-    @item = @user.items.all
+  end
+
+  def index
+    @item = @user.items
   end
 
   def show
-    @user = User.find(params[:id])
-    @item = @user.items.all
-
+    @item = @user.items.find(params[:id])
   end
 
   def new
-    @user = User.find(params[:user_id])
     @item = @user.items.build
   end
 
   def create
-    @user = User.find(params[:user_id])
     @item = @user.items.build(params[:item])
     if @item.save!
       flash[:success]
-      redirect_to new_user_item_path(@user)
+      redirect_to user_items_path(@user)
     else
       flash[:error]
       render '/users'
@@ -31,23 +32,27 @@ class ItemsController < ApplicationController
   end
 
   def edit
-
+    @item = @user.items.find(params[:id])
   end
 
   def update
+    @item = @user.items.find(params[:id])
+    if @item.update_attributes(params[:item])
+      flash[:success] = "Item Updated"
+      redirect_to user_items_path(@user)
+    else
+      flash[:error] = "There was a problem with the form"
+      render 'edit'
+    end
 
   end
 
   def destroy
-    @user = User.find(params[:user_id])
-    @item = Item.find(params[:id])
+    @item = @user.items.find(params[:id])
     @item.destroy
-    redirect_to user_items_path(@user)
-  end
-
-  private
-  def found_user
-    found_user = User.find(params[:user_id])
+    respond_to do |format|
+      format.js
+    end
   end
 
 

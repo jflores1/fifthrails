@@ -12,10 +12,10 @@
   <tbody>
     <% @user.each do |user| %>
         <tr>
-          <td><%= user.first_name %> <%= user.last_name %></td>
+          <td><%= link_to user.full_name, user_path(user) %></td>
           <td><%= user.email_address %></td>
           <td><%= user.phone_number %></td>
-          <td><%= user.addresses.count %></td>
+          <td><%= link_to user.addresses.count, user_addresses_path(user) %></td>
           <td><%= link_to user.items.count, user_items_path(user) %> (<%= link_to "Add item", new_user_item_path(user) %>) </td>
           <td><%= user.orders.count %></td>
         </tr>

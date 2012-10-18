@@ -1,7 +1,25 @@
-<div class="header-form">
+<div class="header-form" xmlns="http://www.w3.org/1999/html">
 
   <% if @current_user then %>
-      <p>Hi, <%= @current_user.first_name %>! <%= link_to "Not you?", signout_path %> </p>
+
+          <div class="dropdown">
+            <div class="btn-group">
+              Hi, <%= @current_user.first_name %>!
+              <a class="icon-th-list" data-toggle="dropdown" href="#"></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                <li><%= link_to "Items and Active Orders", user_path(@user) %></li>
+                <li><%= link_to "Manage Addresses", user_addresses_path(@user) %></li>
+                <li><%= link_to "Manage Orders", user_orders_path(@user) %></li>
+                <li><%= link_to "Edit Account Info", edit_user_path(@user) %></li>
+                <li class="divider"></li>
+                    <% if @current_user.admin? %>
+                        <li><%= link_to "Admin Panel", users_path %></li>
+                    <% end %>
+                <li><%= link_to "Sign Out", signout_path %></li>
+              </ul>
+            </div>
+          </div>
+
   <% else %>
     <%= render 'forms/form_inline_signin'%>
   <% end %>
