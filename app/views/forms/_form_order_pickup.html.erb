@@ -1,6 +1,11 @@
 <%= form_for [@user, @order] do |order_form| %>
 
-    <%= order_form.hidden_field :order_type, value: "Pickup" %>
+    <% if @user.items.count == 0 %>
+
+        <%= order_form.hidden_field :order_type, value: "Pickup" %>
+    <% else %>
+        <%= order_form.select(:order_type, ["Pickup", "Delivery"]) %>
+    <% end %>
 
     <%= order_form.label "When would you like us to pick up your stuff?" %>
     <%= order_form.text_field :order_date, placeholder: "yyyy-mm-dd" %>
@@ -15,6 +20,10 @@
     <%= order_form.label "Any special instructions?" %>
     <%= order_form.text_area :order_notes, cols: 10, rows: 3 %>
     </div>
+
+    <% unless @user.items.count == 0 %>
+        <%= render 'forms/form_item_partial' %>
+    <% end %>
 
     <div>
       <%= order_form.submit "Complete Order", class:"btn btn-danger" %>

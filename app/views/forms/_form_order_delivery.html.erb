@@ -22,7 +22,7 @@
         </tr>
       </thead>
       <tbody>
-          <%= hidden_field_tag "order[item_ids][]" %>
+          <%= hidden_field_tag "order[item_ids][]", nil %>
           <% @user.items.all.each do |item_form| %>
               <tr>
               <td><%= check_box_tag "order[item_ids][]", item_form.id, @order.item_ids.include?(item_form.id) %></td>

@@ -38,8 +38,8 @@
       <tr id="<%= dom_id(order) %>">
         <td><%= order.order_date.strftime("%A, %B %d") %></td>
         <td><%= order.nickname[order.address_id] %></td>
-        <td><%= link_to order.items.count, edit_user_order_item_path(@user, order) %></td>
-        <td><%= link_to "Edit Order", edit_user_order_item_path(@user, order) %></td>
+        <td><%= link_to order.items.count, edit_user_order_path(@user, order) %></td>
+        <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
       </tr>
 
