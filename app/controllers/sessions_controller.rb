@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     user = User.find_by_email_address(params[:session][:email_address].downcase)
     if user && user.authenticate(params[:session][:password]) && user.admin?
       sign_in user
-      redirect_to '/admin'
+      redirect_to '/users'
     elsif user && user.authenticate(params[:session][:password])
       sign_in user
       redirect_to user

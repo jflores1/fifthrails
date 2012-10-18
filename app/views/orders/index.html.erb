@@ -1,0 +1,49 @@
+<h2>Pickups</h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Pickup Date</th>
+    <th>Pickup Address</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @user.orders.pickup.each do |order| %>
+      <tr id="<%= dom_id(order) %>">
+        <td><%= order.order_date.strftime("%A, %B %d") %></td>
+        <td><%= order.nickname[order.address_id] %></td>
+        <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
+        <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
+      </tr>
+
+  <% end %>
+
+  </tbody>
+</table>
+
+<h2>Deliveries</h2>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+  <tr>
+    <th>Delivery Date</th>
+    <th>Delivery Address</th>
+    <th>Items</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @user.orders.delivery.each do |order| %>
+      <tr id="<%= dom_id(order) %>">
+        <td><%= order.order_date.strftime("%A, %B %d") %></td>
+        <td><%= order.nickname[order.address_id] %></td>
+        <td><%= link_to order.items.count, edit_user_order_item_path(@user, order) %></td>
+        <td><%= link_to "Edit Order", edit_user_order_item_path(@user, order) %></td>
+        <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
+      </tr>
+
+  <% end %>
+
+  </tbody>
+</table>

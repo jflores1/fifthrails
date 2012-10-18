@@ -1,19 +1,24 @@
 class OrdersController < ApplicationController
   before_filter :signed_in_user
+  before_filter :get_user
+
+  def index
+    @order = @user.orders.all
+  end
 
   def show
     @order = Order.find(params[:id])
   end
 
   def new
-    @order = current_user.orders.build
-    @address = current_user.addresses
+    @order = @user.orders.build
+    @address = @user.addresses
   end
 
   def create
-    @order = current_user.orders.build(params[:order])
+    @order = @user.orders.build(params[:order])
     if @order.save!
-      redirect_to user_path(current_user)
+      redirect_to user_path(@user)
     else
       render 'new'
     end
@@ -21,14 +26,14 @@ class OrdersController < ApplicationController
   end
 
   def edit
-    @order = Order.find(params[:id])
+    @order = @user.orders.find(params[:user_id])
   end
 
   def update
-    @order = current_user.orders.update_attributes(params[:order])
-    if @order.save!
+    @order = @user.orders.find(params[:id])
+    if @order.update_attributes(params[:order])
       flash[:success]
-      redirect_to user_path(current_user)
+      redirect_to user_path(@user)
     else
       render 'edit'
     end

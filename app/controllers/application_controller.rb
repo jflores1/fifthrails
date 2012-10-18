@@ -19,5 +19,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def get_user
+    if current_user.admin?
+      @user = User.find(params[:user_id])
+    else
+      @user = current_user
+    end
+  end
+
 
 end

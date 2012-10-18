@@ -50,7 +50,9 @@ class ItemsController < ApplicationController
   def destroy
     @item = @user.items.find(params[:id])
     @item.destroy
-    redirect_to user_items_path(@user)
+    respond_to do |format|
+      format.js
+    end
   end
 
 

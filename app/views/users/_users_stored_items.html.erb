@@ -11,7 +11,7 @@
   </thead>
   <tbody>
   <% @item.each do |item| %>
-      <tr>
+      <tr id="<%= dom_id(item) %>">
         <td><%= item.name %></td>
         <td><%= item.item_status %></td>
         <td><%= number_to_currency (item.price) %></td>

@@ -1,14 +1,6 @@
 class AddressesController < ApplicationController
   before_filter :get_user
 
-  def get_user
-    if current_user.admin?
-      @user = User.find(params[:user_id])
-    else
-      @user = current_user
-    end
-  end
-
   def index
     @address = @user.addresses.all
   end

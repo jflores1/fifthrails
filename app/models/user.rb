@@ -62,6 +62,10 @@ class User < ActiveRecord::Base
     self.toggle!(:admin)
   end
 
+  def full_name
+    [first_name, last_name].join(' ')
+  end
+
   private
 
   def create_remember_token
