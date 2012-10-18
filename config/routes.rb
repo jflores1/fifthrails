@@ -1,4 +1,7 @@
 Fifthrails::Application.routes.draw do
+
+  root to:'storage_rental#show'
+
   resources :users, :addresses, :items, :orders, :order_items, :admin
   resources :sessions, only: [:new, :create, :destroy]
 
@@ -13,7 +16,7 @@ Fifthrails::Application.routes.draw do
     resources :order_items
   end
 
-  root to:'storage_rental#show'
+
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
