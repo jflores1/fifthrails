@@ -7,8 +7,10 @@
         <%= order_form.select(:order_type, ["Pickup", "Delivery"]) %>
     <% end %>
 
-    <%= order_form.label "When would you like us to pick up your stuff?" %>
-    <%= order_form.text_field :order_date, placeholder: "yyyy-mm-dd" %>
+    <div id="datepicker">
+      <%= order_form.label "When would you like us to pick up your stuff?" %>
+      <%= order_form.text_field :order_date, placeholder: "yyyy-mm-dd", 'data-behaviour' => 'datepicker' %>
+    </div>
 
     <%= order_form.label "Where are we picking up?" %>
     <%= order_form.collection_select(:address_id, @user.addresses.all, :id, :nickname) %>
