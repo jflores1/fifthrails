@@ -1,9 +1,9 @@
 <%= form_for(:session, url: sessions_path, :html => {:class => "form-inline"}) do |form| %>
 
-    <%= form.text_field :email_address, placeholder:"email address", class: "input-small" %>
+    <%= form.text_field :email_address, placeholder:"email address", class:"input-medium"%>
 
-    <%= form.password_field :password, placeholder:"password", class: "input-small" %>
+    <%= form.password_field :password, placeholder:"password", class:"input-medium" %>
 
-    <%= form.submit "Sign In", class: "btn" %>
+    <%= form.submit "Sign In", class: "btn btn-danger" %>
 
 <% end %>

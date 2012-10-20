@@ -16,14 +16,16 @@ Fifthrails::Application.routes.draw do
     resources :order_items
   end
 
-
-
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
 
   resources :storage_rental do
-
+    collection do
+      get 'how_it_works'
+      get 'pricing'
+      get 'quote'
+    end
   end
 
   resources :admin do

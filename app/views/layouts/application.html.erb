@@ -12,13 +12,17 @@
   <%= yield(:head) %>
 </head>
 <body>
-<header class="navbar navbar-fixed-top">
-  <nav class="navbar-inner">
-      <%= render 'layouts/navigation' %>
-  </nav>
-</header>
 <div class="container">
-  <%= render 'layouts/header' %>
+    <% unless signed_in? %>
+      <header class="navbar navbar-fixed-top">
+        <nav class="navbar-inner">
+          <div class="span10 offset5">
+            <%= render 'layouts/navigation' %>
+          </div>
+        </nav>
+      </header>
+    <% end %>
+    <%= render 'layouts/header' %>
 </div>
 <div id="main" role="main">
   <div class="container">

@@ -1,3 +1,54 @@
 // Place all the styles related to the StorageRental controller here.
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar {
+
+  .navbar-inner{
+    background-color:#f5f5f5;
+    background-image: -moz-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -ms-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f5f5f5));
+    background-image: -webkit-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: -o-linear-gradient(top, #f5f5f5, #f5f5f5);
+    background-image: linear-gradient(top, #f5f5f5, #f5f5f5);
+  }
+
+  ul.nav li {
+    margin-left:10px;
+  }
+
+  ul.nav li a{
+    color:#2c2c2c;
+    font-size: 1.3em;
+  }
+
+  ul.nav li a.get-started{
+    background-color: #ff0000;
+    color:#ffffff;
+    background-image: -moz-linear-gradient(top, #EE5F5B, #BD362F);
+    background-image: -ms-linear-gradient(top, #EE5F5B, #BD362F);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EE5F5B), to(#BD362F));
+    background-image: -webkit-linear-gradient(top, #EE5F5B, #BD362F);
+    background-image: -o-linear-gradient(top, #EE5F5B, #BD362F);
+    background-image: linear-gradient(top, #EE5F5B, #BD362F);
+  }
+
+  ul.nav li a:hover{
+    color:#ff0000;
+  }
+
+  ul.nav li a.get-started:hover{
+    background-color:#ffffff;
+    color:#000;
+  }
+
+}
+
+img.icon{
+  margin:5px;
+}
+
+p.feature{
+  margin-top:10px;
+}

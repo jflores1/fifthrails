@@ -2,7 +2,6 @@
 body {padding-top: 60px;}
 @import "bootstrap-responsive";
 
-
 .branch-location{
   color:#FF0000;
   padding-top:38px;
@@ -22,6 +21,19 @@ form#new_order{
 
   .inline{
     display: inline;
+  }
+
+}
+
+.hero-unit{
+
+  padding: 30px 30px 10px 0px;
+  background-color:#FFF;
+  border: 1px solid #e7e7e7;
+
+  h1{
+    text-align: center;
+    margin-bottom:10px;
   }
 
 }

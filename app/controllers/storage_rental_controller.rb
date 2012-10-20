@@ -4,5 +4,9 @@ class StorageRentalController < ApplicationController
 
   end
 
+  def how_it_works
+
+  end
+
 
 end
