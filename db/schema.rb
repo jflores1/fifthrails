@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121014221638) do
+ActiveRecord::Schema.define(:version => 20121021192722) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -70,13 +70,14 @@ ActiveRecord::Schema.define(:version => 20121014221638) do
   create_table "orders", :force => true do |t|
     t.datetime "order_date"
     t.float    "order_amount"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.text     "order_notes"
     t.string   "referral"
     t.integer  "user_id"
     t.integer  "address_id"
     t.string   "order_type"
+    t.string   "order_status", :default => "Active"
   end
 
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"

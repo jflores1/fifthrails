@@ -15,7 +15,7 @@
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :item_ids, :addresses_attributes, :order_items_attributes, :items_attributes
+  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :order_status, :item_ids, :addresses_attributes, :order_items_attributes, :items_attributes
   belongs_to :user
   has_many   :addresses
   has_many   :order_items
@@ -25,12 +25,14 @@ class Order < ActiveRecord::Base
   accepts_nested_attributes_for :items
 
   ORDER_TYPES = %w[Pickup Delivery]
+  ORDER_STATUS = %w[Active Complete]
 
   #Validations
   #validates :order_amount, presence: true
   validate :order_date, presence: true
   validate :valid_order_date
   validate :valid_order_type
+  validate :valid_order_status
 
   def valid_order_date
     if !order_date.nil?
@@ -42,9 +44,15 @@ class Order < ActiveRecord::Base
     errors.add(:order_type, "Sorry, that's not a valid order type") unless ORDER_TYPES.include? order_type
   end
 
+  def valid_order_status
+    errors.add(:order_status, "Sorry that's not a valid order status") unless ORDER_STATUS.include? order_status
+  end
+
   #Scopes
   scope :pickup, where(:order_type => "Pickup")
   scope :delivery, where(:order_type => "Delivery")
+  scope :active, where(:order_status => "Active")
+  scope :complete, where(:order_status => "Complete")
 
   #Queries
   def nickname

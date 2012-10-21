@@ -7,12 +7,15 @@
   </tr>
   </thead>
   <tbody>
-  <% @user.orders.pickup.each do |order| %>
+  <% @user.orders.active.pickup.each do |order| %>
       <tr id="<%= dom_id(order) %>">
         <td><%= order.order_date.strftime("%A, %B %d") %></td>
         <td><%= order.nickname[order.address_id] %></td>
         <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
+        <% if current_user.admin? %>
+              <td><%= link_to "Complete Order", complete_order_order_path(order), method: :put, remote: true %></td>
+        <% end %>
       </tr>
 
   <% end %>
@@ -31,16 +34,20 @@
     <th>Items</th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
   </thead>
   <tbody>
-  <% @user.orders.delivery.each do |order| %>
+  <% @user.orders.active.delivery.each do |order| %>
       <tr id="<%= dom_id(order) %>">
         <td><%= order.order_date.strftime("%A, %B %d") %></td>
         <td><%= order.nickname[order.address_id] %></td>
         <td><%= link_to order.items.count, edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
+        <% if current_user.admin? %>
+            <td><%= link_to "Complete Order", complete_order_order_path(order), method: :put, remote: true %></td>
+        <% end %>
       </tr>
 
   <% end %>

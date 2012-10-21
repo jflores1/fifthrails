@@ -16,6 +16,10 @@ Fifthrails::Application.routes.draw do
     resources :order_items
   end
 
+  resources :orders do
+    put :complete_order, on: :member
+  end
+
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
@@ -25,6 +29,7 @@ Fifthrails::Application.routes.draw do
       get 'how_it_works'
       get 'pricing'
       get 'quote'
+      get 'faq'
     end
   end
 

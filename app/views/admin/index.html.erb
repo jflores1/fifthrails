@@ -1,1 +1,9 @@
-<%= link_to "See Users", '/users' %>
+<h2>Active Orders</h2>
+<% @order.each do |order| %>
+    <div id="<%= dom_id(order)  %>">
+      <%= order.order_date %>
+      <%= order.order_status %>
+      <%= link_to "Mark complete",[order], controller: :orders, action: :complete_order, id: order, method: :put, remote: true %><br/>
+    </div>
+
+<% end %>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Fifth Room Storage" %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield(:head) %>
+</head>
+<body>
+<div class="container">
+  <% unless signed_in? %>
+      <header class="navbar navbar-fixed-top">
+        <nav class="navbar-inner">
+          <div class="span10 offset5">
+            <%= render 'layouts/navigation' %>
+          </div>
+        </nav>
+      </header>
+  <% end %>
+  <%= render 'layouts/header' %>
+</div>
+<div id="main" role="main">
+  <div class="container">
+    <div class="content">
+      <div class="row">
+        <div class="span12">
+          <%= render 'layouts/messages' %>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12">
+          <%= yield :topic_intro %>
+        </div>
+        <div class="span12">
+          <div class="span8">
+            <%= yield :main_content %>
+          </div>
+          <div class="span4">
+            <%= yield :sidebar %>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <footer class="">
+            <nav class="">
+              <%= render 'layouts/footer' %>
+              <%= debug(params) if Rails.env.development? %>
+            </nav>
+          </footer>
+        </div>
+      </div>
+
+    </div>
+  </div> <!--! end of .container -->
+</div> <!--! end of #main -->
+</body>
+</html>

@@ -2,17 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/storage_rental/how_it_works.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/storage_rental.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/orders/complete_order.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/orders/destroy.js.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/storage_rental/faq.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/storage_rental/quote.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/storage_rental.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/storage_rental.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/storage_rental_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/storage_rental_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_inline_signin.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_inline_signin.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/index.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/storage_rental/how_it_works.html.erb" afterPath="$PROJECT_DIR$/app/views/storage_rental/how_it_works.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/storage_rental/show.html.erb" afterPath="$PROJECT_DIR$/app/views/storage_rental/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/index.html.erb" afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="fifthrails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,53 +44,7 @@
     <groupTables value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="36" selection-start="625" selection-end="625" vertical-scroll-proportion="-11.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="64" selection-start="201" selection-end="201" vertical-scroll-proportion="-2.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage_rental.css.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="18" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.797546">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage_rental_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/storage_rental_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="how_it_works.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/storage_rental/how_it_works.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -93,22 +57,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee" />
-        <option value="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/cycle_counter.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/storage_rental.js.coffee" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/forms/_form_inline_signin.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/storage_rental/quote.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/storage_rental/faq.html.erb" />
         <option value="$PROJECT_DIR$/app/views/storage_rental/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/storage_rental/how-it-works.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/storage_rental_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121021192722_add_order_status_to_orders.rb" />
+        <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/app/views/orders/complete_order.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orders/destroy.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
       </list>
     </option>
   </component>
@@ -149,6 +113,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -167,172 +133,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="storage_rental" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fifthrails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="editor.preferences.import" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_app" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
     <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -656,14 +472,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636815" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12219851" sideWeight="0.8048485" order="3" side_tool="false" content_ui="tabs" x="2228" y="48" width="307" height="658" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22781232" sideWeight="0.38055557" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17022412" sideWeight="0.67363185" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17182498" sideWeight="0.67363185" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969605" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -673,6 +488,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636815" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969605" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -731,112 +547,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="334" selection-end="334" vertical-scroll-proportion="0.1572327">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="260" selection-end="278" vertical-scroll-proportion="0.12578617">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_header_signin.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_inline_signin.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="327" selection-end="327" vertical-scroll-proportion="0.094339624">
+        <state line="8" column="17" selection-start="195" selection-end="195" vertical-scroll-proportion="0.12875536">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_messages.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="29" selection-start="115" selection-end="115" vertical-scroll-proportion="0.06276151">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="99" selection-start="250" selection-end="250" vertical-scroll-proportion="0.07861635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/items/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="64" selection-start="201" selection-end="201" vertical-scroll-proportion="-2.5">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="22" selection-start="343" selection-end="343" vertical-scroll-proportion="0.0">
+        <state line="2" column="21" selection-start="68" selection-end="68" vertical-scroll-proportion="0.03218884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/storage_rental/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="34" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.3616352">
+        <state line="10" column="27" selection-start="297" selection-end="297" vertical-scroll-proportion="0.16094421">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/users/_users_stored_items.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="36" selection-start="625" selection-end="625" vertical-scroll-proportion="-11.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/storage_rental.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="229" selection-end="229" vertical-scroll-proportion="0.04601227">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/storage_rental/how_it_works.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/storage_rental_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="93" selection-end="93" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="526" selection-end="526" vertical-scroll-proportion="0.33742332">
+        <state line="19" column="24" selection-start="427" selection-end="427" vertical-scroll-proportion="0.29141104">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/orders/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="18" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.797546">
+        <state line="40" column="25" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.6289308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/items_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="16" selection-start="971" selection-end="971" vertical-scroll-proportion="0.797546">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/complete_order.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="38" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/destroy.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="10" selection-start="953" selection-end="953" vertical-scroll-proportion="0.78220856">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="30" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.5214724">
           <folding />
         </state>
       </provider>

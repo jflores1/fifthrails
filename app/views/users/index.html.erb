@@ -6,7 +6,7 @@
       <th>Phone Number</th>
       <th>Addresses</th>
       <th>Items</th>
-      <th>Orders</th>
+      <th>Active Orders</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +17,7 @@
           <td><%= number_to_phone(user.phone_number, area_code: true) %></td>
           <td><%= link_to user.addresses.count, user_addresses_path(user) %></td>
           <td><%= link_to user.items.count, user_items_path(user) %> (<%= link_to "Add item", new_user_item_path(user) %>) </td>
-          <td><%= user.orders.count %></td>
+          <td><%= link_to user.orders.active.count, user_orders_path(user) %></td>
         </tr>
 
     <% end %>

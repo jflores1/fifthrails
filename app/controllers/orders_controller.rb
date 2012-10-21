@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_filter :signed_in_user
-  before_filter :get_user
+  before_filter :get_user, except: [:complete_order]
 
   def index
     @order = @user.orders.all
@@ -36,6 +36,23 @@ class OrdersController < ApplicationController
       redirect_to user_path(@user)
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    @order = @user.orders.find(params[:id])
+    @order.destroy
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def complete_order
+    @order = Order.find(params[:id])
+    @order.update_column(:order_status, "Complete")
+    @order.save!
+    respond_to do |format|
+        format.js
     end
   end
 

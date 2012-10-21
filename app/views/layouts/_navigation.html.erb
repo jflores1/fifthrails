@@ -1,9 +1,9 @@
 <ul class="nav">
-  <li><a href="#">How it Works</a></li>
-  <li><a href="#">What it Costs</a></li>
-  <li><a href="#">Get a Quote</a></li>
+  <li><%= link_to "How it works", how_it_works_storage_rental_index_path %></li>
+  <li><%= link_to "Pricing", pricing_storage_rental_index_path %></li>
+  <li><%= link_to "Get a Quote", quote_storage_rental_index_path %></li>
   <li><%= link_to "Get Started", signup_path, class:"get-started" %></li>
-  <li><a href="#">Read our FAQ</a></li>
-  <li><a href="#">Read our Blog</a></li>
+  <li><%= link_to "FAQ", faq_storage_rental_index_path %></li>
+  <li><a href="http://blog.fifthroomstorage.com">Read our Blog</a></li>
   <li class="pull-right"><%= link_to "Sign In", signin_path %></li>
 </ul>

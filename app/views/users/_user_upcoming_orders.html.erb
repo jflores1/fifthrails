@@ -1,5 +1,5 @@
 <h3>Pickups</h3>
-<% @user.orders.pickup.each do |order| %>
+<% @user.orders.active.pickup.each do |order| %>
     <strong><%= order.nickname[order.address_id] %></strong><br/>
     <%= order.order_date.strftime("%A, %B %d") %><br/>
 
@@ -8,7 +8,7 @@
 <% unless @user.orders.delivery.count == 0 %>
 
     <h3>Deliveries</h3>
-    <% @user.orders.delivery.each do |order| %>
+    <% @user.orders.active.delivery.each do |order| %>
         <strong><%= order.nickname[order.address_id] %></strong><br/>
         <%= order.order_date.strftime("%A, %B %d") %><br/>
         <% order.items.each do |show_item| %>
