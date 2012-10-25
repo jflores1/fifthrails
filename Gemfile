@@ -34,7 +34,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'bootstrap-datepicker-rails'
 gem 'jquery-rails'
 gem 'jquery_datepicker'
 

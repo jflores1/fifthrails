@@ -3,7 +3,6 @@
 # Table name: orders
 #
 #  id           :integer          not null, primary key
-#  order_date   :datetime
 #  order_amount :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
@@ -12,10 +11,12 @@
 #  user_id      :integer
 #  address_id   :integer
 #  order_type   :string(255)
+#  order_status :string(255)      default("Active")
+#  order_date   :date
 #
 
 class Order < ActiveRecord::Base
-  attr_accessible :order_date_form, :order_amount, :order_notes, :referral, :address_id, :order_type, :order_status, :item_ids, :addresses_attributes, :order_items_attributes, :items_attributes
+  attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :order_status, :item_ids, :addresses_attributes, :order_items_attributes, :items_attributes
   belongs_to :user
   has_many   :addresses
   has_many   :order_items
@@ -47,15 +48,6 @@ class Order < ActiveRecord::Base
 
   def valid_order_status
     errors.add(:order_status, "Sorry that's not a valid order status") unless ORDER_STATUS.include? order_status
-  end
-
-  def order_date_form
-    order_date.try(:strftime, "%Y-%m-%d")
-  end
-
-  def order_date_form=(time)
-    time = time.split("/", 3)
-    self.order_date = DateTime.new(time[2].to_i, time[0].to_i, time[1].to_i)
   end
 
 

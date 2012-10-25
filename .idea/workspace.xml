@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/order_spec.rb" afterPath="$PROJECT_DIR$/spec/models/order_spec.rb" />
     </list>
     <ignored path="fifthrails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,16 +37,7 @@
       <file leaf-file-name="_form_order_pickup.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="47" selection-start="377" selection-end="377" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_user_upcoming_orders.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="39" selection-start="539" selection-end="539" vertical-scroll-proportion="-8.75">
+            <state line="10" column="41" selection-start="371" selection-end="371" vertical-scroll-proportion="-6.25">
               <folding />
             </state>
           </provider>
@@ -48,45 +46,34 @@
       <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="32" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+            <state line="10" column="16" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.5025773">
+            <state line="0" column="97" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <file leaf-file-name="order.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/order.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="50" column="5" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_navigation.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_navigation.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="-4.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage_rental.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="1" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
+            <state line="7" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.13565892">
               <folding />
             </state>
           </provider>
@@ -105,22 +92,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/orders/destroy.js.erb" />
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121025185323_change_order_date_to_datetime.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       </list>
     </option>
   </component>
@@ -358,6 +345,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -374,10 +365,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -795,20 +782,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/item.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.21778351">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="29" selection-start="222" selection-end="222" vertical-scroll-proportion="0.11968085">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="10" selection-start="953" selection-end="953" vertical-scroll-proportion="0.75386596">
@@ -830,9 +803,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="76" selection-start="1734" selection-end="1734" vertical-scroll-proportion="1.1179554">
+        <state line="62" column="54" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.5223275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.30927834">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121025185323_change_order_date_to_datetime.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="42" selection-start="148" selection-end="148" vertical-scroll-proportion="0.05798969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="49" selection-start="443" selection-end="443" vertical-scroll-proportion="0.2393617">
           <folding />
         </state>
       </provider>
@@ -844,65 +845,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="54" selection-start="2612" selection-end="2612" vertical-scroll-proportion="0.5223275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="47" selection-start="377" selection-end="377" vertical-scroll-proportion="-6.25">
+        <state line="10" column="41" selection-start="371" selection-end="371" vertical-scroll-proportion="-6.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="1" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="39" selection-start="539" selection-end="539" vertical-scroll-proportion="-8.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="21" selection-start="684" selection-end="684" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0">
+        <state line="0" column="97" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="767" selection-end="767" vertical-scroll-proportion="0.5025773">
+        <state line="35" column="0" selection-start="766" selection-end="766" vertical-scroll-proportion="0.48324743">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="5" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="16" selection-start="522" selection-end="522" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="1" selection-start="2406" selection-end="2406" vertical-scroll-proportion="1.9774436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.13565892">
           <folding />
         </state>
       </provider>

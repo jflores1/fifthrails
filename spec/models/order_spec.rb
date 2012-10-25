@@ -3,7 +3,6 @@
 # Table name: orders
 #
 #  id           :integer          not null, primary key
-#  order_date   :datetime
 #  order_amount :float
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
@@ -12,6 +11,8 @@
 #  user_id      :integer
 #  address_id   :integer
 #  order_type   :string(255)
+#  order_status :string(255)      default("Active")
+#  order_date   :date
 #
 
 require 'spec_helper'
