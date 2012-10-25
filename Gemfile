@@ -4,6 +4,7 @@ gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.0.4'
 gem 'bcrypt-ruby'
 gem 'thin'
+gem 'jquery_datepicker'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -32,10 +33,8 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-rails'
 end
-
-gem 'jquery-rails'
-gem 'jquery_datepicker'
 
 group :test do
   gem 'capybara'

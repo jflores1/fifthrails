@@ -4,7 +4,7 @@
     <%= order_form.hidden_field :order_type, value: "Delivery" %>
 
     <%= order_form.label "When would you like us to deliver your stuff?" %>
-    <%= order_form.datepicker :order_date_form %>
+    <%= order_form.text_field :order_form, id:"datepicker" %>
 
     <%= order_form.label "Where are we delivering?" %>
     <%= order_form.collection_select(:address_id, @user.addresses.all, :id, :nickname) %><br/>

@@ -31,10 +31,10 @@ class Order < ActiveRecord::Base
 
   #Validations
   #validates :order_amount, presence: true
-  validate :order_date, presence: true
   validate :valid_order_date
   validate :valid_order_type
   validate :valid_order_status
+  validates :order_date, presence: true
 
   def valid_order_date
     if !order_date.nil?
