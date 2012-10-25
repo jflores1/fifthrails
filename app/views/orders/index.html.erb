@@ -4,6 +4,7 @@
   <tr>
     <th>Pickup Date</th>
     <th>Pickup Address</th>
+    <th>Order Notes</th>
   </tr>
   </thead>
   <tbody>
@@ -11,6 +12,7 @@
       <tr id="<%= dom_id(order) %>">
         <td><%= order.order_date.strftime("%A, %B %d") %></td>
         <td><%= order.nickname[order.address_id] %></td>
+        <td><%= order.order_notes %></td>
         <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
         <% if current_user.admin? %>
@@ -31,6 +33,7 @@
   <tr>
     <th>Delivery Date</th>
     <th>Delivery Address</th>
+    <th>Order Notes</th>
     <th>Items</th>
     <th></th>
     <th></th>
@@ -42,6 +45,7 @@
       <tr id="<%= dom_id(order) %>">
         <td><%= order.order_date.strftime("%A, %B %d") %></td>
         <td><%= order.nickname[order.address_id] %></td>
+        <td><%= order.order_notes %></td>
         <td><%= link_to order.items.count, edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Edit Order", edit_user_order_path(@user, order) %></td>
         <td><%= link_to "Delete Order", [@user, order], method: :delete, remote: true %></td>
