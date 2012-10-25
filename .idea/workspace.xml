@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fifthrails.iml" afterPath="$PROJECT_DIR$/.idea/fifthrails.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
     </list>
     <ignored path="fifthrails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,19 +36,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
+            <state line="14" column="19" selection-start="641" selection-end="641" vertical-scroll-proportion="0.2631579">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="15" selection-start="833" selection-end="833" vertical-scroll-proportion="0.6766917">
+            <state line="35" column="25" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,11 +103,11 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navigation.html.erb" />
         <option value="$PROJECT_DIR$/app/views/storage_rental/pricing.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -768,13 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="20" selection-start="642" selection-end="642" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
@@ -817,7 +804,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="15" selection-start="833" selection-end="833" vertical-scroll-proportion="0.6766917">
+        <state line="35" column="25" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="19" selection-start="641" selection-end="641" vertical-scroll-proportion="0.2631579">
           <folding />
         </state>
       </provider>
