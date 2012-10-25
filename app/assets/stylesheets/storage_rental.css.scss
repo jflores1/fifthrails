@@ -52,3 +52,59 @@ img.icon{
 p.feature{
   margin-top:10px;
 }
+
+table#pricing{
+  margin-bottom:20px;
+
+
+  th, td{
+    width: 140px;
+    text-align: center;
+  }
+
+  th{
+    padding: 20px;
+    font-size:1.4em;
+  }
+
+  th.monthly, th.annually{
+    background: rgba(162, 162, 162, 0.1);
+    box-shadow: inset 0 2px 15px 0 rgba(162, 162, 162, 0.3);
+  }
+
+  th.quarterly{
+    background: rgba(255, 230, 56, 0.2);
+    box-shadow: inset 0px 0px 25px -3px rgba(255, 230, 56, 0.7);
+  }
+
+  td.monthly, td.annually{
+    padding: 5px 0;
+    background: rgba(162, 162, 162, 0.05);
+    box-shadow: inset 0 2px 15px 0 rgba(189, 189, 189, 0.04);
+  }
+
+  td.quarterly{
+    background: rgba(255, 214, 0, 0.14);
+    color:#00008b;
+  }
+
+  tbody, td{
+    border: solid 2px #ffffff;
+  }
+
+  td.row-header{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  td.row-leader{
+    background: rgba(162, 162, 162, 0.05);
+    padding: 5px 0px 5px 10px;
+    width: 280px;
+    text-align: left;
+  }
+
+  td.highlight{
+    color:#ff0000;
+  }
+}
