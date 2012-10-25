@@ -33,6 +33,8 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'bootstrap-datepicker-rails'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-rails'
+  gem 'jquery_datepicker'
 end
 
 gem 'jquery-rails'
