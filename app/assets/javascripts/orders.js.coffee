@@ -5,6 +5,5 @@
 $ ->
   $("#datepicker").datepicker({
     minDate: +1,
-    dateFormat: "yy-mm-dd"
   })
 

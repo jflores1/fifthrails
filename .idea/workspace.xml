@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-c705854c136453b2181705e4eefbe183.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-c705854c136453b2181705e4eefbe183.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/order.rb" afterPath="$PROJECT_DIR$/app/models/order.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" afterPath="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
     </list>
     <ignored path="fifthrails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,28 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="62" selection-start="347" selection-end="347" vertical-scroll-proportion="0.12578617">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="..orders" pinned="false" current="false" current-in-tab="false">
         <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
           <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
             <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orders.js.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -80,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="97" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
+            <state line="0" column="82" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -118,15 +90,15 @@
         <option value="$PROJECT_DIR$/app/views/orders/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20121025185323_change_order_date_to_datetime.rb" />
         <option value="$PROJECT_DIR$/app/views/users/_user_upcoming_orders.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee" />
         <option value="$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
       </list>
     </option>
   </component>
@@ -256,6 +228,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifthrails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifthrails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifthrails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fifthrails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -696,23 +712,9 @@
         <state line="25" column="54" selection-start="819" selection-end="819" vertical-scroll-proportion="0.49867022" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="97" selection-start="144" selection-end="144" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/storage_rental.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="109" column="1" selection-start="2406" selection-end="2406" vertical-scroll-proportion="1.9774436" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="437" selection-end="437" vertical-scroll-proportion="0.12269939">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
@@ -726,15 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="384" selection-end="384" vertical-scroll-proportion="0.11006289">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="684" selection-end="684" vertical-scroll-proportion="0.24539877">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -752,30 +745,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_delivery.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="29" selection-start="222" selection-end="222" vertical-scroll-proportion="0.094339624">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="57" selection-start="387" selection-end="387" vertical-scroll-proportion="-6.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
@@ -792,9 +766,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/orders.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="16" selection-start="283" selection-end="283" vertical-scroll-proportion="0.09202454">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbElement:/42e24569/9320b6b5-04d8-4dcf-8dce-204d0aa881e6/..orders">
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="62" selection-start="347" selection-end="347" vertical-scroll-proportion="0.12578617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="684" selection-end="684" vertical-scroll-proportion="0.24539877">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="437" selection-end="437" vertical-scroll-proportion="0.12269939">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/forms/_form_order_pickup.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="57" selection-start="387" selection-end="387" vertical-scroll-proportion="-6.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="82" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
