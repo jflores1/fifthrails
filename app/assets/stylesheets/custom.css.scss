@@ -38,3 +38,34 @@ form#new_order{
   }
 
 }
+
+#sidebar-quote-form{
+
+  background-color: #ffffff;
+  border: solid 1px #e7e7e7;
+  border-radius: 4px;
+  padding: 20px;
+  -moz-box-shadow: inset 0 0 3px 3px #c0c0c0;
+  -webkit-box-shadow: inset 0 0 3px 3px #c0c0c0;
+  box-shadow: inset 0 0 3px 3px #c0c0c0;
+
+
+  p{
+    font-size: 1.0em;
+    font-weight: bold;
+    margin: 10px 0px 5px 0px;
+  }
+
+  hr {
+    margin-top: 10px;
+  }
+
+  .form-inline label {
+    margin-right: 15px;
+  }
+
+  .form-horizontal label {
+    margin-top:5px;
+  }
+
+}

@@ -50,5 +50,9 @@ FactoryGirl.define do
     item_status       "Stored"
   end
 
+  factory :quote do
+
+  end
+
 
 end

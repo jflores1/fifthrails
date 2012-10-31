@@ -1,0 +1,51 @@
+<div id="sidebar-quote-form">
+  <h3>Get a Quote</h3>
+    <%= form_for @quote, remote: true do |quote| %>
+      <%= render 'shared/user_form_error_messages', object: quote.object %>
+
+      <p>What type of storage do you need?</p>
+      <hr/>
+
+      <div class="form-inline">
+        <%= quote.radio_button :customer_type, "Residential", id:"Residential"%>
+        <%= quote.label "Residential", class:"radio inline" %>
+        <%= quote.radio_button :customer_type, "Business", id:"Business" %>
+        <%= quote.label "Business", id:"Business", class:"radio inline" %>
+      </div>
+
+      <p>Do you need help with...</p>
+      <hr/>
+      <div class="form-inline">
+        <%= quote.radio_button :customer_need, "Storage", id:"Storage"%>
+        <%= quote.label "Storage", class:"radio inline" %>
+        <%= quote.radio_button :customer_need, "Moving", id:"Moving" %>
+        <%= quote.label "Moving", class:"radio inline" %>
+        <%= quote.radio_button :customer_need, "Both", id:"Both" %>
+        <%= quote.label "Both", class:"radio inline" %>
+
+      </div>
+
+       <p>Where do you need your stuff picked up?</p>
+       <hr/>
+       <div class="form-horizontal">
+         <%= quote.label "From: ", class:"inline" %>
+         <%= quote.text_field :customer_location, placeholder: "ZIP / Postal Code", id:"Customer Location" %>
+         <%= quote.label "On: ", class:"inline" %>
+         <%= quote.text_field :customer_need_date, placeholder: "on yy-mm-dd", id:"datepicker" %>
+       </div>
+
+      <p>How should we contact you?</p>
+      <hr/>
+      <div class="form-horizontal">
+        <%= quote.label "Email: " %>
+        <%= quote.text_field :quote_email, placeholder: "Email Address", id:"Email" %>
+        <%= quote.label "Phone Number: " %>
+        <%= quote.text_field :quote_phone_number, placeholder: "555-555-5555", id:"Phone" %>
+      </div>
+
+      <hr/>
+      <%= quote.submit "Get Quote", class:"btn btn-danger", html: {"href" => "#new_quote_modal",  "data-toggle" => "modal"} %>
+
+
+    <% end  %>
+</div>

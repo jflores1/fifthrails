@@ -7,10 +7,12 @@ class StorageRentalController < ApplicationController
   end
 
   def how_it_works
+    @quote = Quote.new
 
   end
 
   def pricing
+    @quote = Quote.new
 
   end
 

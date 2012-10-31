@@ -1,3 +1,5 @@
+<% content_for(:title, "How storage rental works") %>
+
 <% content_for :topic_intro do %>
     <h2>Personal Storage. Reimagined</h2>
     <p>Who likes spending a weekend schlepping stuff to storage? Now you don't have to. Our storage service offers free pickup, next day delivery, and you never pay for space you don't use!</p>
@@ -8,5 +10,5 @@
 <% end %>
 
 <% content_for :sidebar do %>
-    <h3>This is a quote form.</h3>
+    <%= render 'forms/form_quote' %>
 <% end %>

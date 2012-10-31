@@ -2,7 +2,7 @@ Fifthrails::Application.routes.draw do
 
   root to:'storage_rental#show'
 
-  resources :users, :addresses, :items, :orders, :order_items, :admin
+  resources :users, :addresses, :items, :orders, :order_items, :admin, :storage_rental, :quotes
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users do
@@ -20,18 +20,16 @@ Fifthrails::Application.routes.draw do
     put :complete_order, on: :member
   end
 
+  #session matchers
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy'
 
-  resources :storage_rental do
-    collection do
-      get 'how_it_works'
-      get 'pricing'
-      get 'quote'
-      get 'faq'
-    end
-  end
+  #storage_rental matchers
+  match '/how_it_works',               to: 'storage_rental#how_it_works'
+  match '/pricing',                    to: 'storage_rental#pricing'
+  match '/frequently_asked_questions', to: 'storage_rental#faq'
+  match '/storage_quote',                      to: 'storage_rental#quote'
 
   resources :admin do
 
