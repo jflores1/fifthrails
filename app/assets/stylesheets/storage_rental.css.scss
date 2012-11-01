@@ -108,3 +108,39 @@ table#pricing{
     color:#ff0000;
   }
 }
+
+.bottom-margined{
+  margin-bottom:20px;
+}
+
+.top-margined{
+  margin-top:20px;
+}
+
+.display-image{
+  border: solid 1px #e7e7e7;
+}
+
+table#feature-table{
+
+
+  th{
+    text-align: center;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  td.descriptor{
+    text-align: left;
+    width:225px;
+  }
+
+}
+
+div#feature-vignettes{
+
+  h3{
+  }
+}

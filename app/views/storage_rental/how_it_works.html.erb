@@ -1,8 +1,152 @@
 <% content_for(:title, "Easy, Convenient Storage Rental. Self Storage, So Long.") %>
 
 <% content_for :main_content do %>
-    <h2>Personal Storage. Reimagined</h2>
-    <p>Who likes spending a weekend schlepping stuff to storage? Now you don't have to. Our storage service offers free pickup, next day delivery, and you never pay for space you don't use!</p>
+    <h2>Storage. Sans Schlep.</h2>
+    <p>Schlepping to storage is a hassle. So is getting stuff out. Now, you don't have to worry about any of it.</p>
+
+    <h3>Getting Started is Easy</h3>
+    <p>Getting started is easy. <%= link_to "Just schedule an appointment", signup_path %> and we'll send someone out to pick up the stuff you want to store. You don't even have to give us a credit card until we pick up your stuff.</p>
+
+    <div class="row-fluid">
+      <div class="span12">
+        <table class="table table-bordered table-condensed top-margined" id="feature-table">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Door-2-Door</th>
+            <th>Storage Unit</th>
+            <th>Portable Storage</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="descriptor">Door to Door Service</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td></td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+          </tr>
+
+          <tr>
+            <td class="descriptor">Only Pay for Space You Use</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="descriptor">Only Pay for Transportation You Use</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="descriptor">Keep Track of Inventory Online</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="descriptor">Retrieve Individual Items Online</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td class="descriptor">Climate Control Available</td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+            <td><%= image_tag "icon-xmark.png" %></td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span12" id="feature-vignettes">
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "icon-door-to-door.png" %>
+
+          </div>
+          <div class="span10">
+            <h3>Door to Door Service</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "icon-pay-for-space.png" %>
+
+          </div>
+          <div class="span10">
+            <h3>Only Pay for Space You Use</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid top-margined">
+      <div class="span12">
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "icon-delivery.png" %>
+
+          </div>
+          <div class="span10">
+            <h3>Only Pay for Transportation You Use</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "" %>
+
+          </div>
+          <div class="span10">
+            <h3>Keep Track of Your Stuff Online</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row-fluid top-margined">
+      <div class="span12">
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "icon-store-individual-items.png" %>
+
+          </div>
+          <div class="span10">
+            <h3>Retrieve Individual Items Online</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+        <div class="span6">
+          <div class="span2">
+            <%= image_tag "icon-climate-control.png" %>
+
+          </div>
+          <div class="span10">
+            <h3>Climate Control Available</h3>
+            <p>test</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 <% end %>
 
 <% content_for :sidebar do %>

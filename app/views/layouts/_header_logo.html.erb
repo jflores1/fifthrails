@@ -1,13 +1,13 @@
 <% if signed_in? && current_user.admin? %>
     <div class="span4">
-      <%= link_to image_tag("logo.gif"), users_path  %>
+      <%= link_to image_tag("logo_door2doorstorage.png"), users_path  %>
     </div>
 <% elsif signed_in? %>
     <div class="span4">
-      <%= link_to image_tag("logo.gif"), user_path(@user)  %>
+      <%= link_to image_tag("logo_door2doorstorage.png"), user_path(@user)  %>
     </div>
 <% else %>
     <div class="span4">
-      <%= link_to image_tag("logo.gif"), root_path  %>
+      <%= link_to image_tag("logo_door2doorstorage.png"), root_path  %>
     </div>
 <% end %>

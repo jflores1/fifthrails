@@ -82,17 +82,6 @@ ActiveRecord::Schema.define(:version => 20121031144328) do
 
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
-  create_table "quote_mailers", :force => true do |t|
-    t.string   "need"
-    t.string   "customer_type"
-    t.integer  "location"
-    t.date     "need_date"
-    t.string   "email"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "phone_number"
-  end
-
   create_table "quotes", :force => true do |t|
     t.string   "customer_type"
     t.string   "customer_need"

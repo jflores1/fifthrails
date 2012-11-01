@@ -1,16 +1,23 @@
 ---
 fifthroom_apple_family.png: fifthroom_apple_family-6fdd9e2c3b1e648132171aa3e832e0aa.png
 header-contact-button.gif: header-contact-button-dd44e8ae2aeb38aa397c6dafd7ae5df5.gif
+icon-climate-control.png: icon-climate-control-e27a806b8c35de8fe9725bf22ebc6a5a.png
+icon-delivery.png: icon-delivery-33b16946cae41d1c1bad537afb6a864b.png
 icon-door-to-door.png: icon-door-to-door-a1ee44f44fac3b4bf8627eaf43e847ba.png
+icon-no-lifting.png: icon-no-lifting-1ad1676734b47c3544adac5f132a904c.png
 icon-pay-for-space.png: icon-pay-for-space-b2da44efccc5ed72ef182f049c6163ba.png
 icon-relax.png: icon-relax-c3ac82b84cc17f0f5c8350abc2e92dd3.png
+icon-store-individual-items.png: icon-store-individual-items-90a9bb05c9dbdecf3e3e182e0e19a4d0.png
+icon-xmark.png: icon-xmark-5e6b94dade18c43ac7c6af77dbc79628.png
+image-scheduling-pickup.png: image-scheduling-pickup-129027e6659fe32a366fbdc3c7b8c940.png
 logo.gif: logo-ff9928fee4a9c15c2bc8d2db44b665c9.gif
+logo_door2doorstorage.png: logo_door2doorstorage-a29253a309f178a4dad279272322b2f4.png
 main-page-delivery-image.jpg: main-page-delivery-image-d18ed60bcdabdd2c0fb64ce873c4b292.jpg
 main-page-manage-online-image.jpg: main-page-manage-online-image-1c4958d23c7534720e48efb87a55603f.jpg
 main-page-pay-for-space-image.jpg: main-page-pay-for-space-image-e54faf07ed4c5f3c306e853509443cf3.jpg
 main-page-security-image.jpg: main-page-security-image-9fa326d9467203c7bbf25f3662d5895b.jpg
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 application.js: application-986efdde13abbb5ae9934b8e587f30d8.js
-application.css: application-1f88b485dd7f4b732c96e08a442409a2.css
+application.css: application-c941a48d61ff3fc0b6133213b61f4038.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
 glyphicons-halflings.png: glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png
