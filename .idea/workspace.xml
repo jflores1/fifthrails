@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90230125-4bf5-4c9b-9e12-5567cdae051b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
     </list>
     <ignored path="fifthrails.iws" />
@@ -37,7 +39,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.107361965">
+            <state line="32" column="2" selection-start="634" selection-end="634" vertical-scroll-proportion="0.49079755">
               <folding />
             </state>
           </provider>
@@ -708,7 +710,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="137" selection-end="137" vertical-scroll-proportion="0.107361965">
+        <state line="32" column="2" selection-start="634" selection-end="634" vertical-scroll-proportion="0.49079755">
           <folding />
         </state>
       </provider>
