@@ -1,5 +1,6 @@
 class StorageRentalController < ApplicationController
   layout "storage_rental"
+  before_filter :new_quote_instance
 
   def show
     render layout: "application"
@@ -7,12 +8,10 @@ class StorageRentalController < ApplicationController
   end
 
   def how_it_works
-    @quote = Quote.new
 
   end
 
   def pricing
-    @quote = Quote.new
 
   end
 
@@ -22,6 +21,10 @@ class StorageRentalController < ApplicationController
 
   def faq
 
+  end
+
+  def new_quote_instance
+    @quote = Quote.new
   end
 
 
