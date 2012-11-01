@@ -25,8 +25,12 @@ class Order < ActiveRecord::Base
   accepts_nested_attributes_for :order_items, allow_destroy: true
   accepts_nested_attributes_for :items
 
+  #constants
   ORDER_TYPES = %w[Pickup Delivery]
   ORDER_STATUS = %w[Active Complete]
+
+  #Callbacks
+  after_save :new_order_notification
 
 
   #Validations
@@ -38,7 +42,7 @@ class Order < ActiveRecord::Base
 
   def valid_order_date
     if !order_date.nil?
-      errors.add(:order_date, "Sorry, we need 24 hours of notice!") unless order_date >= Date.tomorrow
+      errors.add(:order_date, "Sorry, we need 24 hours of notice!") unless order_date > Date.today
     end
   end
 
@@ -50,12 +54,16 @@ class Order < ActiveRecord::Base
     errors.add(:order_status, "Sorry that's not a valid order status") unless ORDER_STATUS.include? order_status
   end
 
-
   #Scopes
   scope :pickup, where(:order_type => "Pickup")
   scope :delivery, where(:order_type => "Delivery")
   scope :active, where(:order_status => "Active")
   scope :complete, where(:order_status => "Complete")
+
+  #Mailers
+  def new_order_notification
+    OrderMailer.new_order(self).deliver
+  end
 
   #Queries
   def nickname

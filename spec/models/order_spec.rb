@@ -19,10 +19,11 @@ require 'spec_helper'
 
 describe Order do
 
-  let(:account) {FactoryGirl.create(:account)}
+  let(:user) {FactoryGirl.create(:user)}
   let(:address) {FactoryGirl.create(:address)}
 
-  before {@order = account.orders.build(order_date:"2012-09-29", order_amount:15.45, address_id:1)}
+  before {@order = user.orders.build(order_date:"2012-12-29", order_amount:"25.00", address_id: 1, order_notes:"",
+                                     order_type:"Pickup", order_status:"Active")}
 
   it {should respond_to(:order_date)}
   it {should respond_to(:order_amount)}
@@ -38,12 +39,21 @@ describe Order do
       end
 
       describe "Order date must be at least 1 day in the future" do
-        before {@order.order_date >= Date.tomorrow}
+        before {@order.order_date = Date.tomorrow}
         it {should be_valid}
       end
     end
 
 
+  end
+
+  context "It sends emails when new orders are received" do
+    describe "when a new order is placed" do
+      it "alerts us with an email" do
+        @order.save!
+        last_email.to.should include("service@fifthroomstorage.com")
+      end
+    end
   end
 
 end

@@ -1,0 +1,13 @@
+<%= @greeting %>,
+
+You got a new order (Yay!). Here are the deets:
+
+Customer: <%= @order.user.first_name %> <%= @order.user.last_name %>
+Order Date: <%= @order.order_date %>
+Order Location: <%= @order.address_id %>
+Order Type: <%= @order.order_type %>
+Order Referral: <%= @order.referral %>
+Order Notes: <%= @order.order_notes %>
+
+Help 'em out!
+

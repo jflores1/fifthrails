@@ -1,15 +1,14 @@
 FactoryGirl.define do
 
   factory :user do
-    email_address   "jesse@test.com"
-    password        "password"
-    password_confirmation "password"
-    first_name      "Jesse"
-    middle_initial  "A"
-    last_name       "Flores"
-    home_phone      "123-456-7895"
-    work_phone      "123-565-7980"
-    cell_phone      "234-567-7890"
+    email_address           "jesse@test.com"
+    password                "password"
+    password_confirmation   "password"
+    first_name              "Jesse"
+    middle_initial          "A"
+    last_name               "Flores"
+    phone_number            "123-456-7895"
+    admin                   false
   end
 
   factory :address do
@@ -34,9 +33,12 @@ FactoryGirl.define do
 
   factory :order do
     order_date      "2012-12-31"
-    account
+    user
     order_amount    "25.00"
     address
+    order_notes     "No notes"
+    order_type      "Pickup"
+    order_status    "Active"
   end
 
   factory :item do
