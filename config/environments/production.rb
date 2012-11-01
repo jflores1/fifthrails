@@ -54,11 +54,11 @@ Fifthrails::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
-      :port                 => 465,
+      :port                 => 587,
       :domain               => 'fifthroomstorage.com',
       :user_name            => 'service@fifthroomstorage.com',
       :password             => 'fifthroom002',
-      :authentication       => 'login',
+      :authentication       => :plain,
       :enable_starttls_auto => true  }
 
   # Enable threaded mode
