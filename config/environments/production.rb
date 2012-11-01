@@ -51,6 +51,16 @@ Fifthrails::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address              => "smtp.gmail.com",
+      :port                 => 465,
+      :domain               => 'fifthroomstorage.com',
+      :user_name            => 'service@fifthroomstorage.com',
+      :password             => 'fifthroom002',
+      :authentication       => 'login',
+      :enable_starttls_auto => true  }
+
   # Enable threaded mode
   # config.threadsafe!
 

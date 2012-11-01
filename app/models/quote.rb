@@ -37,6 +37,8 @@ class Quote < ActiveRecord::Base
     quote.quote_phone_number = quote_phone_number.gsub(/\D/,'')
   end
 
+  after_save :new_quote_notification
+
   #methods
   def valid_customer_type
     errors.add(:customer_type, message:"Sorry, that's not a valid customer type") unless CUSTOMER_TYPE.include? customer_type
@@ -44,6 +46,12 @@ class Quote < ActiveRecord::Base
 
   def valid_customer_need
     errors.add(:customer_need, message:"Sorry, we only do moving or storage") unless CUSTOMER_NEED.include? customer_need
+  end
+
+  #private methods
+  private
+  def new_quote_notification
+    QuoteMailer.new_quote(self).deliver
   end
 
 end

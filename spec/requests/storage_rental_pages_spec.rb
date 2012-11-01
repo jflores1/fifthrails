@@ -57,7 +57,7 @@ describe "StorageRentalPages" do
           choose  "Residential"
           choose  "Storage"
           fill_in "Customer Location",  with: 30082
-          fill_in "datepicker",         with: 2012-11-01
+          fill_in "datepicker",         with: "2012-11-01"
           fill_in "Email",              with: "jesse@test.com"
           fill_in "Phone",              with: "555-555-5555"
         end
@@ -65,6 +65,7 @@ describe "StorageRentalPages" do
         it "should create a quote" do
           expect {click_button submit}.to change{Quote.count}.by(1)
         end
+        it {should have_selector('div', id:"#new_quote_modal")}
       end
 
     end

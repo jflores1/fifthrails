@@ -16,7 +16,7 @@ class QuotesController < ApplicationController
         format.js
       end
     else
-      flash[:error] = "Sorry, you didn't fill out the form properly."
+      flash[:notice] = "Sorry, you didn't fill out the form properly."
       render 'forms/form_quote'
     end
   end

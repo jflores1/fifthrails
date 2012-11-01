@@ -141,6 +141,15 @@ describe Quote do
       it {should be_valid}
     end
 
+  end
+
+  context "It sends emails" do
+    describe "When a new quote is entered" do
+      it "sends us a notification" do
+        quote = FactoryGirl.create(:quote)
+        last_email.to.should include("service@fifthroomstorage.com")
+      end
+    end
 
   end
 

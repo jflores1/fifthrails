@@ -51,7 +51,12 @@ FactoryGirl.define do
   end
 
   factory :quote do
-
+    customer_type       "Residential"
+    customer_need       "Storage"
+    customer_location   30082
+    customer_need_date  "2012-12-31"
+    quote_email         "email@email.com"
+    quote_phone_number  "555-555-5555"
   end
 
 
