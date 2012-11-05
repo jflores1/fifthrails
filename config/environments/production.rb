@@ -72,7 +72,7 @@ Fifthrails::Application.configure do
   config.active_support.deprecation = :notify
 
   #Google Analytics
-  config.middleware.use Rack::GoogleAnalytics, :tracker => 'UA-36091508-1'
+  GA.tracker = "UA-36091508-1"
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
