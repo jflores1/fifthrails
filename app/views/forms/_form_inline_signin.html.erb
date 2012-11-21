@@ -1,9 +1,12 @@
-<%= form_for(:session, url: sessions_path, :html => {:class => "form-inline"}) do |form| %>
+<%= form_for(:session, url: sessions_path, :html => {class: "form-inline pull-right head-login-margin"}) do |form| %>
 
-    <%= form.text_field :email_address, placeholder:"email address", class:"input-medium"%>
+    <label>
+      <span class="label">Customer Login</span>
+    </label><br/>
+    <%= form.text_field :email_address, placeholder:"email address", class:"input-small"%>
 
-    <%= form.password_field :password, placeholder:"password", class:"input-medium" %>
+    <%= form.password_field :password, placeholder:"password", class:"input-small" %>
 
-    <%= form.submit "Sign In", class: "btn btn-danger" %>
+    <%= form.submit "Sign In", class: "btn" %>
 
 <% end %>

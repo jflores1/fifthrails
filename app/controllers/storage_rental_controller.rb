@@ -2,8 +2,15 @@ class StorageRentalController < ApplicationController
   layout "storage_rental"
   before_filter :new_quote_instance
 
+  def home
+    render layout: "single_page_promotional"
+  end
+
+  def business
+    render layout: "single_page_promotional"
+  end
+
   def show
-    render layout: "application"
 
   end
 

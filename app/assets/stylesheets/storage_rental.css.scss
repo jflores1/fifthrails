@@ -2,47 +2,50 @@
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.navbar {
+body.single-page {
+  padding-top: 0px;
+}
 
-  .navbar-inner{
-    background-color:#f5f5f5;
-    background-image: -moz-linear-gradient(top, #f5f5f5, #f5f5f5);
-    background-image: -ms-linear-gradient(top, #f5f5f5, #f5f5f5);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f5f5f5), to(#f5f5f5));
-    background-image: -webkit-linear-gradient(top, #f5f5f5, #f5f5f5);
-    background-image: -o-linear-gradient(top, #f5f5f5, #f5f5f5);
-    background-image: linear-gradient(top, #f5f5f5, #f5f5f5);
-  }
+.navbar-inner {
+  min-height: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: -o-linear-gradient(top, #ffffff, #f2f2f2);
+  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-repeat: repeat-x;
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0);
+  *zoom: 1;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+}
 
-  ul.nav li {
-    margin-left:10px;
-  }
+.navbar .divider-vertical {
+  height: 40px !important;
+  margin: 0 9px !important;
+  border-right: 1px solid #ffffff !important;
+  border-left: 1px solid #f2f2f2 !important;
+  background: #ffffff;
+}
 
-  ul.nav li a{
-    color:#2c2c2c;
-    font-size: 1.3em;
-  }
+.navbar .nav > li > a {
+  float: none;
+  padding: 10px 15px 10px;
+  color: #777777;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #ffffff;
+}
 
-  ul.nav li a.get-started{
-    background-color: #ff0000;
-    color:#ffffff;
-    background-image: -moz-linear-gradient(top, #EE5F5B, #BD362F);
-    background-image: -ms-linear-gradient(top, #EE5F5B, #BD362F);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#EE5F5B), to(#BD362F));
-    background-image: -webkit-linear-gradient(top, #EE5F5B, #BD362F);
-    background-image: -o-linear-gradient(top, #EE5F5B, #BD362F);
-    background-image: linear-gradient(top, #EE5F5B, #BD362F);
-  }
-
-  ul.nav li a:hover{
-    color:#ff0000;
-  }
-
-  ul.nav li a.get-started:hover{
-    background-color:#ffffff;
-    color:#000;
-  }
-
+.navbar .nav > li > a:hover {
+  color: #000;
 }
 
 img.icon{
@@ -143,4 +146,207 @@ div#feature-vignettes{
 
   h3{
   }
+}
+
+/* James Edits Begin Here */
+
+.vizborder{
+  border: 1px solid;
+}
+
+.body-padding{
+  padding-top: 150px;
+}
+
+.anchor{
+  position: relative;
+  top:-150px;
+}
+
+.head-margin{
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+
+.head-login-margin{
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.logo-navbar{
+  background-color: #fefefe;
+  position:fixed;
+  z-index: 10;
+}
+
+/* Carousel Edits */
+
+
+.carousel {
+  margin-bottom: 30px;
+}
+
+.carousel .container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-control {
+  background-color: transparent;
+  border: 0;
+  font-size: 120px;
+  margin-top: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+
+.carousel .item {
+  height: 300px;
+}
+.carousel img {
+  min-width: 100%;
+  height: 300px;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 80px;
+  margin-bottom: 140px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+
+/* Why Content */
+
+.why {
+  margin-bottom: 20px;
+}
+
+.why .span4 {
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.why .span6 {
+  text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.why h2 {
+  font-weight: normal;
+}
+.why .span4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.why .span6 p {
+  //width: 300px;
+  //margin-left: 75px;
+  width: 70%;
+  margin: 0px auto;
+}
+
+.section-header{
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+
+
+/* Pricing Content */
+
+.pricing {
+  background-color: #cccccc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+
+.pricing h2 {
+  font-weight: normal;
+  line-height: 2.5em;//75px / 30px
+}
+
+
+.pricing .span2 {
+  margin-top: 75px;
+}
+
+.image-rotate img {
+  transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+}
+
+.image-rotate-2 img {
+  transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+}
+
+.table-center th{
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.table-center td{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Content */
+
+.about-us{
+  background-color: #bea17c;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-us p{
+  margin: 30px;
+}
+
+.affiliations{
+  color: #cccccd;
+  text-align: center;
+}
+
+.affiliations img{
+  margin-bottom: 50px;
+}
+
+.footer-links{
+  text-align: center;
+  font-size: 0.714285em; //10px / 14px;
 }

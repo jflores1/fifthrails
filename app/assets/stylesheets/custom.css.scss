@@ -1,7 +1,49 @@
 @import url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css);
+body {
+  padding-top: 60px;
+}
 @import "bootstrap";
-body {padding-top: 60px;}
-@import "bootstrap-responsive";
+//@import "bootstrap-responsive";
+
+body {
+  font-size: 62.5%;
+
+  h2 {
+    font-size: 3em;
+    line-height: 1.333333em;
+  }
+
+  h4 {
+    font-size: 2em;
+    line-height: 1.111111em;
+  }
+
+  h5 {
+    font-size: 1.4em;
+    line-height: 1.42857143em;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  a {
+    font-size: 1.4em;
+  }
+
+  table {
+
+    a {
+      font-size: 1em;
+    }
+
+    td {
+      font-size: 1.4em;
+    }
+
+  }
+
+}
 
 .branch-location{
   color:#FF0000;

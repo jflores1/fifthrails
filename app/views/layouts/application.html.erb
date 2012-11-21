@@ -14,16 +14,14 @@
 </head>
 <body>
 <div class="container">
-    <% unless signed_in? %>
       <header class="navbar navbar-fixed-top">
         <nav class="navbar-inner">
           <div class="pull-right">
-            <%= render 'layouts/navigation' %>
+            <%= render 'layouts/single_page_nav' %>
           </div>
         </nav>
       </header>
-    <% end %>
-    <%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
 </div>
 <div id="main" role="main">
   <div class="container">
@@ -31,14 +29,14 @@
       <div class="row">
         <div class="span12">
           <%= render 'layouts/messages' %>
-         </div>
-       </div>
+        </div>
+      </div>
 
-          <%= yield %>
+      <%= yield %>
 
       <div class="row">
         <div class="span12">
-          <footer class="">
+          <footer class="footer-links">
             <nav class="">
               <%= render 'layouts/footer' %>
               <%= debug(params) if Rails.env.development? %>

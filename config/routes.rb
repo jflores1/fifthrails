@@ -1,6 +1,6 @@
 Fifthrails::Application.routes.draw do
 
-  root to:'storage_rental#show'
+  root to:'storage_rental#home'
 
   resources :users, :addresses, :items, :orders, :order_items, :admin, :storage_rental, :quotes
   resources :sessions, only: [:new, :create, :destroy]
@@ -29,7 +29,8 @@ Fifthrails::Application.routes.draw do
   match '/how_it_works',               to: 'storage_rental#how_it_works'
   match '/pricing',                    to: 'storage_rental#pricing'
   match '/frequently_asked_questions', to: 'storage_rental#faq'
-  match '/storage_quote',                      to: 'storage_rental#quote'
+  match '/storage_quote',              to: 'storage_rental#quote'
+  match '/business',                   to: 'storage_rental#business'
 
   resources :admin do
 

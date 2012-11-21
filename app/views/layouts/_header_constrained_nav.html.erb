@@ -1,0 +1,24 @@
+<div class="logo-navbar">
+
+  <!-- Logo and Login  -->
+  <div class="container">
+    <div class="row head-margin">
+      <div class="span5">
+        <%= render 'layouts/header_logo' %>
+      </div>
+      <div class="span3">
+        <h4>Atlanta, GA</h4>
+        <h5>404.624.6013</h5>
+      </div>
+      <div class="span4">
+        <%= render 'forms/form_header_signin' %>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar  -->
+  <% unless signed_in? %>
+    <%= render 'layouts/single_page_nav' %>
+  <% end %>
+
+</div>

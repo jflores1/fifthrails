@@ -1,0 +1,251 @@
+<!-- Carousel  -->
+<div class="container body-padding">
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active">
+        <%= image_tag "document_storage.png", class: "img-rounded" %>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Affordable Business Storage</h1>
+            <p class="lead">We'll pick up your documents (or anything else) and store them until you need them.  You don't lift a finger.</p>
+            <a class="btn btn-caption" href="#whyus">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <%= image_tag "manage_online_bz.png", class:"img-rounded" %>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Manage Your Storage Online</h1>
+            <p class="lead">Never forget what you have stored and request items back with a few mouse clicks.</p>
+            <a class="btn btn-caption" href="#whyus">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+  </div>
+</div>
+
+<!-- Features -->
+
+<div class="container why">
+
+  <div class="row">
+    <div class="span12 section-header">
+      <a id="whyus" class="anchor">&nbsp;</a>
+      <%= image_tag "why_header.png", class: "img" %>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="span4">
+      <%= image_tag "pickup.png", class: "img" %>
+      <h2>Pickup and Delivery</h2>
+      <p>No more renting a truck or schlepping to the other side of town.  We take care of it.</p>
+    </div>
+    <div class="span4">
+      <%= image_tag "no_lift.png", class: "img" %>
+      <h2>No Lifting</h2>
+      <p>We take care of all the lifting. Just tell us what needs to go.  You don't need to lift a finger.</p>
+    </div>
+    <div class="span4">
+      <%= image_tag "manage.png", class: "img" %>
+      <h2>Manage it Online</h2>
+      <p>See everything you have stored online.  Schedule pickups and deliveries with a few clicks.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="span6">
+      <%= image_tag "security.png", class: "img" %>
+      <h2>Safe and Secure</h2>
+      <p>Your belongings are stored in our highly secure facility so you have peace of mind.</p>
+    </div>
+    <div class="span6">
+      <%= image_tag "space.png", class: "img" %>
+      <h2>Pay for the Space You Use</h2>
+      <p>Why pay for for a whole unit if you don't need it? We have pricing plans for every need.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+<!-- Pricing -->
+<div class="container pricing">
+  <div class="row">
+    <div class="span12">
+      <a id="pricing" class="anchor">&nbsp;</a>
+      <%= image_tag "pricing_header.png", class: "img" %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h2>How much stuff are you storing?</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span5 offset1 image-rotate">
+      <%= link_to image_tag("by_the_item.png", class: "img-polaroid"), "#by_the_item_modal", html_options = {"data-toggle"=>"modal"} %>
+      <h2>A Few Items</h2>
+      <a href="#by_the_item_modal" role="button" class="btn btn-danger" data-toggle="modal">Find Out More<i class="icon-chevron-right icon-white"> </i></a>
+    </div>
+
+    <div class="span5 image-rotate-2">
+      <%= link_to image_tag("by_the_room.png", class: "img-polaroid"), "#by_the_room_modal", html_options = {"data-toggle" => "modal"} %>
+      <h2>An Entire Roomful</h2>
+      <a href="#by_the_room_modal" role="button" class="btn btn-danger" data-toggle="modal">Find Out More<i class="icon-chevron-right icon-white"> </i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Pricing Modals -->
+
+<div id="by_the_item_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+    <h3 id="myModalLabel">Item Pricing</h3>
+  </div>
+  <div class="modal-body">
+    <p>We charge for storage by the item, so you only pay for the space you need.  Here is a list of prices for typical items we see.  Your item not listed?  Give us a call at <strong>(404)624-6013</strong>.</p>
+
+    <table class="table table-bordered table-striped table-center">
+      <thead>
+      <tr>
+        <th>Type</th>
+        <th>Item</th>
+        <th>Monthly Price</th>
+        <th>Quarterly Price <br><span class="label label-important">Save 10%</span></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Boxes</td>
+        <td></td>
+        <td>$3.25</td>
+        <td>$2.92</td>
+      </tr>
+      <tr>
+        <td rowspan="5">Small Items</td>
+        <td>Floor Lamp</td>
+        <td>$3.25</td>
+        <td>$2.92</td>
+      </tr>
+      <tr>
+        <td>Small Filing Cabinet</td>
+        <td>$3.25</td>
+        <td>$2.92</td>
+      </tr>
+      <tr>
+        <td>Waiting Room Chair</td>
+        <td>$3.25</td>
+        <td>$2.92</td>
+      </tr>
+      <tr>
+        <td>Armchair</td>
+        <td>$8.00</td>
+        <td>$7.20</td>
+      </tr>
+      <tr>
+        <td>Small Bookcase</td>
+        <td>$9.50</td>
+        <td>$8.55</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Large Items</td>
+        <td>Small Desk</td>
+        <td>$14.00</td>
+        <td>$12.60</td>
+      </tr>
+      <tr>
+        <td>Love Seat</td>
+        <td>$14.00</td>
+        <td>$12.60</td>
+      </tr>
+      <tr>
+        <td>Sofa</td>
+        <td>$21.50</td>
+        <td>$19.35</td>
+      </tr>
+
+      </tbody>
+    </table>
+
+    <div class="span1">
+      <%= image_tag "delivery_price.png", class: "img" %>
+    </div>
+    <div class="span5">
+      <p><strong>Pickup and Delivery</strong></p>
+      <p>The first 15 minutes is free.  Beyond that, we charge <strong>$25</strong> per 15 minutes on-site.</p>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-danger pull-left">Schedule Pickup</a>
+    <a href="#by_the_room_modal" role="button" class="btn btn-warning" data-toggle="modal" data-dismiss="modal">Room Pricing</a>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<div id="by_the_room_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+    <h3 id="myModalLabel">Room Pricing</h3>
+  </div>
+  <div class="modal-body">
+
+    <p>For those with significant storage needs, we offer pricing by the room.  Questions?  Give us a call at <strong>(404)624-6013</strong>.
+
+    <table class="table table-bordered table-striped table-center">
+      <thead>
+      <tr>
+        <th>Unit Size</th>
+        <th>Holds</th>
+        <th>Monthly Price</th>
+        <th>Quarterly Price<br><span class="label label-important">Save 10%!</span></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>5' x 5'</td>
+        <td><small>Business Items from 1 Room</small></td>
+        <td>$70</td>
+        <td>$62</td>
+      </tr>
+      <tr>
+        <td>5' x 10'</td>
+        <td><small>Business Items from 2 Rooms</small></td>
+        <td>$90</td>
+        <td>$81</td>
+      </tr>
+      <tr>
+        <td>10' x 10'</td>
+        <td><small>Business Items from 3 Rooms</small></td>
+        <td>$150</td>
+        <td>$135</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="span1">
+      <%= image_tag "delivery_price.png", class: "img" %>
+    </div>
+    <div class="span5">
+      <p><strong>Pickup and Delivery</strong></p>
+      <p>The first 15 minutes is free.  Beyond that, we charge <strong>$25</strong> per 15 minutes on-site.</p>
+    </div>
+
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn btn-danger pull-left">Schedule Pickup</a>
+    <a href="#by_the_item_modal" role="button" class="btn btn-warning" data-toggle="modal" data-dismiss="modal">Item Pricing</a>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+  </div>
+</div>
+
+<div class="container">
+    <%= render 'partial_about_us' %>
+</div>

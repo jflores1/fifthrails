@@ -2,4 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-$('div.featurettes').cycle('fade')
+$("#header-btn-toggle a").bind "click", ->
+  $(this).toggleClass "active"
