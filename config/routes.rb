@@ -1,5 +1,7 @@
 Fifthrails::Application.routes.draw do
 
+  devise_for :users
+
   root to:'storage_rental#home'
 
   resources :users, :addresses, :items, :orders, :order_items, :admin, :storage_rental, :quotes
