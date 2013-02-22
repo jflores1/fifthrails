@@ -16,18 +16,43 @@
 require 'spec_helper'
 
 describe User do
-  before {@user = User.new(email:"jesse.flores@me.com", first_name:"Jesse", middle_initial:"A", last_name:"Flores", phone_number: '123-456-7890')}
+  let(:user){FactoryGirl.build(:user)}
+  subject {user}
 
   describe "a working model" do
-    before {@user.save!}
-    it {should change(User, :count).by(1)}
+    it {expect{user.save}.to change(User, :count).by(1)}
+
+    it {should respond_to(:email)}
+    it {should respond_to(:addresses)}
+    it {should respond_to(:first_name)}
+    it {should respond_to(:middle_initial)}
+    it {should respond_to(:last_name)}
+    it {should respond_to(:phone_number)}
+
+    describe "has validations" do
+      describe "phone_number isn't too short" do
+        before {user.phone_number = "a"*6}
+        it "does not add a phone number" do
+          expect {user.save}.to_not change(User, :count).by(1)
+        end
+        it "raises an error" do
+          expect {user.save!}.to raise_error(ActiveRecord::RecordInvalid)
+        end
+      end
+
+      describe "phone number isn't too long" do
+        before {user.phone_number = "a"*17}
+        it "does not add a User record" do
+          expect {user.save}.to_not change(User, :count).by_at_least(1)
+        end
+        it "raises an error" do
+          expect {user.save!}.to raise_error(ActiveRecord::RecordInvalid)
+        end
+      end
+
+    end
   end
 
-  it {should respond_to(:email)}
-  it {should respond_to(:addresses)}
-  it {should respond_to(:first_name)}
-  it {should respond_to(:middle_initial)}
-  it {should respond_to(:last_name)}
-  it {should respond_to(:phone_number)}
+  
 
 end
