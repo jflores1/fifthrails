@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031144328) do
+ActiveRecord::Schema.define(:version => 20130222155651) do
 
   create_table "accounts", :force => true do |t|
     t.string   "first_name"
@@ -82,17 +82,6 @@ ActiveRecord::Schema.define(:version => 20121031144328) do
 
   add_index "orders", ["user_id"], :name => "index_orders_on_user_id"
 
-  create_table "quote_mailers", :force => true do |t|
-    t.string   "need"
-    t.string   "customer_type"
-    t.integer  "location"
-    t.date     "need_date"
-    t.string   "email"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "phone_number"
-  end
-
   create_table "quotes", :force => true do |t|
     t.string   "customer_type"
     t.string   "customer_need"
@@ -105,20 +94,14 @@ ActiveRecord::Schema.define(:version => 20121031144328) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email_address"
-    t.string   "password"
-    t.string   "password_confirmation"
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
-    t.string   "password_digest"
-    t.string   "remember_token"
+    t.string   "email"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.string   "first_name"
     t.string   "middle_initial"
     t.string   "last_name"
     t.string   "phone_number"
-    t.boolean  "admin",                 :default => false
+    t.boolean  "admin",          :default => false
   end
-
-  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end
