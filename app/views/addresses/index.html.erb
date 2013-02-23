@@ -1,3 +1,5 @@
+<% provide(:title, "#{@user.full_name}'s Saved Addresses") %>
+
 <h3><%= @user.first_name %>'s Saved Addresses</h3>
 
 <%= show_addresses(@user) %>
