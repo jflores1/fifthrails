@@ -1,6 +1,4 @@
 class OrdersController < ApplicationController
-  before_filter :signed_in_user
-  before_filter :get_user, except: [:complete_order]
 
   def index
     @order = @user.orders.all
@@ -11,6 +9,7 @@ class OrdersController < ApplicationController
   end
 
   def new
+    @user = User.find(params[:user_id])
     @order = @user.orders.build
     @address = @user.addresses
   end

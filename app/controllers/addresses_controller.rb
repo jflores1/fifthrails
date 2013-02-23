@@ -1,5 +1,5 @@
 class AddressesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :load_user
   load_and_authorize_resource
 
   def index
@@ -13,14 +13,12 @@ class AddressesController < ApplicationController
   end
 
   def new
-    @address = @user.addresses.build
+    @user = User.find(params[:user_id])
   end
 
   def create
     @address = @user.addresses.build(params[:address])
-    if @address.save! && @user.addresses.count == 1 #this needs to be scoped out and moved to model.
-      redirect_to new_order_path(@user)
-    elsif @address.save!
+    if @address.save!
       redirect_to user_path(@user)
     else
       render 'new'
@@ -44,6 +42,11 @@ class AddressesController < ApplicationController
     @address = @user.addresses.find(params[:id])
     @address.destroy
     redirect_to user_addresses_path(@user)
+  end
+
+  protected
+  def load_user
+    @user = User.find(params[:user_id])
   end
 
 end
