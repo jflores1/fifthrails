@@ -1,6 +1,6 @@
 $(document).ready ->
 	$('.input-small').focus (e) ->
-		$(this).addClass('span2')
+		$(this).addClass('input-large')
 
 	$('.input-small').blur (e) ->
-		$(this).removeClass('span2')
+		$(this).removeClass('input-large')

@@ -1,10 +1,10 @@
 <div class="profile-header">
   <div class="dropdown pull-right">
     <span>
-      <a class="dropown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i></a>
+      <a class="dropown-toggle user-menu" data-toggle="dropdown" href="#"><i class="icon-user"></i></a>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
         <li><%= link_to "Items and Active Orders", user_path(current_user) %></li>
-        <li><%= link_to "Manage Addresses", user_addresses_path(current_user) %></li>
+        <li><%= link_to "<i class='icon-building'></i> Manage Addresses".html_safe, user_addresses_path(@user) %></li>
         <li><%= link_to "Manage Orders", user_orders_path(current_user) %></li>
         <li><%= link_to "Edit Account Info", edit_user_path(current_user) %></li>
         <li class="divider"></li>

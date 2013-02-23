@@ -34,9 +34,10 @@ describe User do
     it {should respond_to(:email)}
     it {should respond_to(:addresses)}
     it {should respond_to(:first_name)}
-    it {should respond_to(:middle_initial)}
+    it {should_not respond_to(:middle_initial)}
     it {should respond_to(:last_name)}
     it {should respond_to(:phone_number)}
+    it {should respond_to(:company)}
 
     describe "has validations" do
       describe "phone_number isn't too short" do

@@ -1,12 +1,15 @@
 class AddressesController < ApplicationController
-  before_filter :get_user
+  before_filter :authenticate_user!
+  load_and_authorize_resource
 
   def index
-    @address = @user.addresses.all
+    @user = User.find(params[:user_id])
+    @addresses = @user.addresses
   end
 
   def show
-    @address = @user.addresses.find(params[:id])
+    @user = User.find(params[:id])
+    @address = @user.address.find(params[:id])
   end
 
   def new

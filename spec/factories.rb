@@ -5,10 +5,18 @@ FactoryGirl.define do
     password                "password"
     password_confirmation   "password"
     first_name              "Jesse"
-    middle_initial          "A"
     last_name               "Flores"
+    company                 "Acme"
     phone_number            "123-456-7895"
     admin                   false
+
+    factory :user_with_items do
+      after(:create) do |user|
+        5.times do
+          user.items.create(attributes_for(:item))  
+        end
+      end
+    end
   end
 
   factory :address do
