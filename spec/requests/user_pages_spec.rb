@@ -2,29 +2,49 @@ require 'spec_helper'
 
 describe "UserPages" do
 
-  subject {page}
+  describe "from the home page" do
+    let!(:user){create(:user)}
+    before {visit root_path}
+    it "allows a user to log into their storage locker" do
+      fill_in_login_form
+      current_path.should eq(user_path(user))
+    end
+  end
 
-  describe "Signup" do
-    before {visit signup_path}
-    let(:submit) {"Create Account"}
-
+  describe "creating a new account" do
+    before {visit new_user_registration_path}
     describe "with valid information" do
-      before do
-        fill_in "Email Address",    with:"user@example.com"
-        fill_in "Password",         with:"password"
-        fill_in "Confirm Password", with:"password"
-        fill_in "First Name",       with:"First"
-        fill_in "Last Name",        with:"Last"
-        fill_in "Middle Initial",   with:"M"
-        fill_in "Home Phone",       with:"555-555-5555"
-        fill_in "Cell Phone",       with:""
-        fill_in "Work Phone",       with:""
-      end
-
-      it "should create a user" do
-        expect {click_button submit}.to change(User, :count).by(1)
+      it "creates a new user" do
+        expect {fill_in_form_with_valid_info}.to change(User, :count).by(1)
       end
     end
+  end
+
+  describe "the user's profile page" do
+    let!(:user){create(:user)}
+    before do
+      visit root_path
+      fill_in_login_form
+    end
+    it {page.should_not have_selector("form", id: 'new_user')}
+    it {page.should have_content(user.first_name)}
+  end
+
+  private
+  def fill_in_form_with_valid_info
+    fill_in "user_email",                 with: "new_user@test.com"
+    fill_in "user_password",              with: "password"
+    fill_in "user_password_confirmation", with: "password"
+    fill_in "user_first_name",            with: "Jesse"
+    fill_in "user_last_name",             with: "Flores"
+    fill_in "user_phone_number",          with: "123-456-7890"
+    click_button "Sign up"
+  end
+
+  def fill_in_login_form
+    fill_in "user_email",    with: "jesse@test.com"
+    fill_in "user_password", with: "password"  
+    click_button "Sign In"
   end
 
 end

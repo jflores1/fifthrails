@@ -1,0 +1,51 @@
+<h3>Create your account</h3>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="span12">
+  	<h4>You</h4>
+  	<div class="span5">
+  		<%= f.label :first_name, nil %>
+  		<%= f.text_field :first_name, class: "span9" %>
+  	</div>
+  	<div class="span5">
+  		<%= f.label :last_name, nil %>
+  		<%= f.text_field :last_name, class: "span9" %>
+  	</div>
+  </div>
+
+  <div class="span12">
+  	<h4>Your contact info</h4>
+  	<div class="span5">
+  		<%= f.label :email, "Email (will be used to log in)" %>
+  		<%= f.email_field :email, :autofocus => true, class: "span9" %>	
+  	</div>
+  	<div class="span5">
+  		<%= f.label :phone_number %>
+  		<%= f.phone_field :phone_number, class: "span9" %>
+  	</div>
+  </div>
+  
+  <div class="span12">
+  	<h4>Your password</h4>
+  	<div class="span5">
+  		<%= f.label :password %>
+	  	<%= f.password_field :password, class: "span9" %>
+  	</div>
+  	<div class="span5">
+  		<%= f.label :password_confirmation %>
+	  	<%= f.password_field :password_confirmation, class: "span9" %>
+  	</div>
+  </div>
+
+  <div class="span12 last">
+  	<%= f.submit "Sign up", class:"btn btn-danger" %>
+  </div>
+  
+<% end %>
+<div class="span12">
+	<%= render "devise/shared/links" %>
+</div>
+
+

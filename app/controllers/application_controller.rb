@@ -1,31 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  include SessionsHelper
-  before_filter :get_current_user
 
-  def get_current_user
-    @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+  def after_sign_in_path_for(user)
+  	user_path(user)
   end
-
-  def admin?
-    false
-  end
-
-  def authorize
-    unless current_user.admin?
-      flash[:error] = "unauthorized access"
-      redirect_to user_path(current_user)
-      false
-    end
-  end
-
-  def get_user
-    if current_user.admin?
-      @user = User.find(params[:user_id])
-    else
-      @user = current_user
-    end
-  end
-
 
 end

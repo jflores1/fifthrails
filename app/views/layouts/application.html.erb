@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= content_for?(:title) ? yield(:title) : "Fifth Room Storage" %></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -13,28 +11,23 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
-<div class="container">
-      <header class="navbar navbar-fixed-top">
-        <nav class="navbar-inner">
-          <div class="pull-right">
-            <%= render 'layouts/single_page_nav' %>
-          </div>
-        </nav>
-      </header>
-  <%= render 'layouts/header' %>
-</div>
+  <header class="navbar navbar-fixed-top">
+    <nav class="navbar-inner">
+        <%= show_fixed_header %>
+    </nav>
+  </header>
 <div id="main" role="main">
   <div class="container">
     <div class="content">
-      <div class="row">
+      <div class="row-fluid">
         <div class="span12">
           <%= render 'layouts/messages' %>
         </div>
       </div>
-
-      <%= yield %>
-
-      <div class="row">
+      <div class="row-fluid">
+        <%= yield %>
+      </div>
+      <div class="row-fluid">
         <div class="span12">
           <footer class="footer-links">
             <nav class="">

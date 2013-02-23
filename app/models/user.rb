@@ -46,12 +46,11 @@ class User < ActiveRecord::Base
   before_save do |account|
     account.first_name = first_name.capitalize
     account.last_name  = last_name.capitalize
-    account.middle_initial = middle_initial.capitalize
   end
+  #TODO: remove middle_initial, add company
 
   validates :first_name, presence:true
   validates :last_name, presence:true
-  validates :middle_initial, length:  {is: 1}, allow_blank: true
   validates :phone_number, length: {in: 7..16}
 
   #scope

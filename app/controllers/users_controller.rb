@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:edit, :update, :destroy]
-  before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin?, only:[:index, :show]
+  before_filter :authenticate_user!
+  load_and_authorize_resource
 
   def index
     @user = User.includes(:items).all
