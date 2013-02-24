@@ -26,7 +26,7 @@ Fifthrails::Application.configure do
   config.active_record.mass_assignment_sanitizer = :strict
 
   # Don't serve static assets in development
-  config.serve_static_assets = true
+  config.serve_static_assets = false
 
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)

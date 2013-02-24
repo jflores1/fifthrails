@@ -48,6 +48,16 @@ describe "UserPages" do
       it {page.should have_selector("table")}
     end
 
+    context "with active pickups" do
+      let(:address){user.addresses.create(attributes_for(:address))}
+      before do
+        user.orders.create(attributes_for(:order, address_id: address.id))
+        visit user_path(user)
+      end
+      it {page.should have_selector("li", text: "Home")}
+      it {page.should have_selector("li", text: "Sunday, March 31")}
+    end
+
     context "can navigate to other pages" do
       before do
         visit user_path(user)
@@ -56,6 +66,12 @@ describe "UserPages" do
         find(".user-menu").click
         click_link("Manage Addresses")
         current_path.should eq(user_addresses_path(user))
+      end
+
+      it "allows user to go to order history" do
+        find(".user-menu").click
+        click_link("Manage Orders")
+        current_path.should eq(user_orders_path(user))
       end
     end
   end

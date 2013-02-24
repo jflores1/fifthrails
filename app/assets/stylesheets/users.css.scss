@@ -18,3 +18,21 @@ form.new_user{
 		margin-bottom: 2em;
 	}
 }
+
+div.tab-content{
+	ul{
+		margin-left: 1em !important;
+	}
+}
+
+.upcoming-service{
+
+	li{
+		list-style: none;
+		font-size: 1.3em;
+	}
+
+	li.service-address{
+		color: #ff0000;
+	}
+}

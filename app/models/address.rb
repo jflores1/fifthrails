@@ -19,7 +19,7 @@
 class Address < ActiveRecord::Base
   attr_accessible :address_line_1, :address_line_2, :city, :state, :zip_code, :address_type, :nickname
   belongs_to :user
-  belongs_to :order
+  has_many :orders
 
   before_save {|address| address.address_type = address_type.capitalize}
 

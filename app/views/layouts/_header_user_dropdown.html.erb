@@ -3,10 +3,10 @@
     <span>
       <a class="dropown-toggle user-menu" data-toggle="dropdown" href="#"><i class="icon-user"></i></a>
       <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-        <li><%= link_to "<i class='icon-home'></i>Your Fifth Room".html_safe, user_path(current_user) %></li>
+        <li><%= link_to "<i class='icon-home'></i>Your Fifth Room".html_safe, user_path(@user) %></li>
         <li><%= link_to "<i class='icon-building'></i> Manage Addresses".html_safe, user_addresses_path(@user) %></li>
-        <li><%= link_to "<i class='icon-shopping-cart'></i> Manage Orders".html_safe, user_orders_path(current_user) %></li>
-        <li><%= link_to "<i class='icon-cog'></i> Account".html_safe, edit_user_path(current_user) %></li>
+        <li><%= link_to "<i class='icon-shopping-cart'></i> Manage Orders".html_safe, user_orders_path(@user) %></li>
+        <li><%= link_to "<i class='icon-cog'></i> Account".html_safe, edit_user_path(@user) %></li>
         <li class="divider"></li>
         <li><%= link_to "<i class='icon-signout'></i> Sign Out".html_safe, destroy_user_session_path, method: :delete %></li>
       </ul>

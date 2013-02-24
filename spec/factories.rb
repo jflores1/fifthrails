@@ -25,8 +25,8 @@ FactoryGirl.define do
     city            "Smyrna"
     state           "GA"
     zip_code        "30082"
-    account
-    address_type    "Shipping"
+    nickname        "Home"
+    address_type    "Pickup"
   end
 
   factory :account do
@@ -40,13 +40,12 @@ FactoryGirl.define do
   end
 
   factory :order do
-    order_date      "2012-12-31"
-    user
+    order_date      "2013-03-31"
     order_amount    "25.00"
-    address
     order_notes     "No notes"
     order_type      "Pickup"
     order_status    "Active"
+    association :address, factory: :address
   end
 
   factory :item do

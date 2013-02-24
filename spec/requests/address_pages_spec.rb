@@ -21,13 +21,13 @@ describe "AddressPages" do
   	end
 
   	context "with an address" do
-  		before do
-  			user.addresses.create(attributes_for(:address))
+      before do
+        user.addresses.create(attributes_for(:address))
   			visit user_addresses_path(user)
   		end
   		it "deletes an address" do
   			expect{
-  				find_link("Delete Address").click	
+  				click_link("Delete Address")
   			}.to change(user.addresses, :count).by(-1)
   		end
   	end
