@@ -1,9 +1,9 @@
-<%= form_for(:session, url: sessions_path, :html => {class: "form-inline pull-right head-login-margin"}) do |form| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "form-inline pull-right head-login-margin"}) do |form| %>
 
     <label>
       <span class="label">Customer Login</span>
     </label><br/>
-    <%= form.text_field :email_address, placeholder:"email address", class:"input-small"%>
+    <%= form.text_field :email, placeholder:"email address", class:"input-small"%>
 
     <%= form.password_field :password, placeholder:"password", class:"input-small" %>
 

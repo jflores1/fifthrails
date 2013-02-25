@@ -2,33 +2,35 @@
 body {
   padding-top: 60px;
 }
-@import "bootstrap";
-//@import "bootstrap-responsive";
 
 body {
   font-size: 62.5%;
 
   h2 {
-    font-size: 3em;
+    font-size: 2.4em;
     line-height: 1.333333em;
   }
 
+  h3{
+    font-size: 1.8em;
+  }
+
   h4 {
-    font-size: 2em;
+    font-size: 1.4em;
     line-height: 1.111111em;
   }
 
   h5 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     line-height: 1.42857143em;
   }
 
   p {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   a {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   table {
@@ -43,6 +45,13 @@ body {
 
   }
 
+}
+
+.fixed-header-logo{
+  img{
+    width: 60%;
+    padding: 1em;
+  }
 }
 
 .branch-location{
@@ -111,3 +120,41 @@ form#new_order{
   }
 
 }
+.no-left-margin{
+  margin-left: none !important;
+}
+
+div.profile-header{
+  color: #000;
+  padding-top: 2em;
+
+  p{
+    font-size: 1.6em;
+  }
+
+  i, a{
+    color: #000;
+  }
+
+  span{
+    float: right;
+    margin-left: 0.5em;
+
+    i{
+      font-size: 1.6em;
+    }
+  }
+}
+
+ul.dropdown-menu {
+  li a{
+    i{
+      font-size: 1em;
+    }
+  }
+}
+
+.bottom-margin{
+  margin-bottom: 1em !important;
+}
+

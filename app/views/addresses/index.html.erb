@@ -1,5 +1,7 @@
-<h2>Addresses for:</h2>
-<h3><%= @user.first_name %> <%= @user.last_name %></h3>
-<%= link_to "Add a new address", new_user_address_path(@user) %>
+<% provide(:title, "#{@user.full_name}'s Saved Addresses") %>
 
-<%= render 'users_addresses' %>
+<h3><%= @user.first_name %>'s Saved Addresses</h3>
+
+<%= show_addresses(@user) %>
+
+<%= link_to "Add a new address", new_user_address_path(@user) %>

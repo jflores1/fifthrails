@@ -1,9 +1,9 @@
 class OrdersController < ApplicationController
-  before_filter :signed_in_user
-  before_filter :get_user, except: [:complete_order]
+  before_filter :authenticate_user!, :load_user
+  load_and_authorize_resource
 
   def index
-    @order = @user.orders.all
+    @orders = @user.orders
   end
 
   def show
@@ -11,8 +11,7 @@ class OrdersController < ApplicationController
   end
 
   def new
-    @order = @user.orders.build
-    @address = @user.addresses
+    @order = Order.new
   end
 
   def create
@@ -54,6 +53,10 @@ class OrdersController < ApplicationController
     respond_to do |format|
         format.js
     end
+  end
+
+  def load_user
+    @user = User.find(params[:user_id])
   end
 
 end

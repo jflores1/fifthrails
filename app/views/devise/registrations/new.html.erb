@@ -1,0 +1,55 @@
+<h3>Create your account</h3>
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="span12">
+  	<h4>You</h4>
+  	<div class="span5">
+  		<%= f.label :first_name, "Your First Name" %>
+  		<%= f.text_field :first_name, class: "span9" %>
+  	</div>
+  	<div class="span5">
+  		<%= f.label :last_name, "Your Last Name" %>
+  		<%= f.text_field :last_name, class: "span9" %>
+  	</div>
+    <div class="span5">
+      <%= f.label :company, "Your Company (optional)" %>
+      <%= f.text_field :company, class: "span9" %>
+    </div>
+  </div>
+
+  <div class="span12">
+  	<h4>Your contact info</h4>
+  	<div class="span5">
+  		<%= f.label :email, "Your Email (will be used to log in)" %>
+  		<%= f.email_field :email, :autofocus => true, class: "span9" %>	
+  	</div>
+  	<div class="span5">
+  		<%= f.label :phone_number, "A Number We Can Reach You" %>
+  		<%= f.phone_field :phone_number, class: "span9" %>
+  	</div>
+  </div>
+  
+  <div class="span12">
+  	<h4>Your password</h4>
+  	<div class="span5">
+  		<%= f.label :password, "Your Password" %>
+	  	<%= f.password_field :password, class: "span9" %>
+  	</div>
+  	<div class="span5">
+  		<%= f.label :password_confirmation, "One More Time" %>
+	  	<%= f.password_field :password_confirmation, class: "span9" %>
+  	</div>
+  </div>
+
+  <div class="span12 last">
+  	<%= f.submit "Sign up", class:"btn btn-danger btn-large" %>
+  </div>
+  
+<% end %>
+<div class="span12">
+	<%= render "devise/shared/links" %>
+</div>
+
+

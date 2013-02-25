@@ -1,29 +1,24 @@
 Fifthrails::Application.routes.draw do
 
-  root to:'storage_rental#home'
+  devise_for :users
 
-  resources :users, :addresses, :items, :orders, :order_items, :admin, :storage_rental, :quotes
-  resources :sessions, only: [:new, :create, :destroy]
+  root to:'storage_rental#business'
+
+  resources :addresses, :items, :order_items, :admin, :storage_rental, :quotes
 
   resources :users do
     resources :addresses
-    resources :orders
     resources :items
+    resources :orders
     resources :order_items
   end
 
   resources :orders do
     resources :order_items
+    member do
+      put :complete_order
+    end
   end
-
-  resources :orders do
-    put :complete_order, on: :member
-  end
-
-  #session matchers
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy'
 
   #storage_rental matchers
   match '/how_it_works',               to: 'storage_rental#how_it_works'
@@ -31,11 +26,7 @@ Fifthrails::Application.routes.draw do
   match '/frequently_asked_questions', to: 'storage_rental#faq'
   match '/storage_quote',              to: 'storage_rental#quote'
   match '/business',                   to: 'storage_rental#business'
-
-  resources :admin do
-
-  end
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

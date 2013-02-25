@@ -1,7 +1,9 @@
+<% provide(:title, "#{@user.full_name}'s Fifth Room") %>
+
 <div class="row-fluid">
   <div class="span12">
-    <h2>Hi, <%= @user.first_name %>! </h2>
-    <p>Welcome to your account page. From here, you can see items you have in storage, have them delivered, or schedule new pickukps.</p>
+    <h3>Hi, <%= @user.first_name %>! </h3>
+    <p>Welcome to your 5th Room! From here, you can access the items you have in storage, have them delivered, or schedule new pickups. Pretty simple, huh?</p>
   </div>
 </div>
 <div class="row-fluid">
@@ -21,11 +23,11 @@
       <% if @user.items.stored.count > 0 %>
         <%= render 'users/users_stored_items' %>
       <% else %>
-        <p>You don't have any items stored right now.</p>
+        <p>You don't have anything stored right now. <%= link_to "Request a pickup!", new_user_order_path(@user) %></p>
       <% end %>
 
     </div>
-    <div class="span3">
+    <div class="span4">
       <h3>Upcoming Pickups & Deliveries</h3>
         <%= render 'user_upcoming_orders' %>
     </div>

@@ -7,18 +7,18 @@
         <%= render 'layouts/header_logo' %>
       </div>
       <div class="span3">
-        <h4>Atlanta, GA</h4>
-        <h5>404.624.6013</h5>
+        <h3>Atlanta, GA</h3>
+        <h4>404.624.6013</h4>
       </div>
       <div class="span4">
-        <%= render 'forms/form_header_signin' %>
+        <%= nav_form_or_menu %>
       </div>
     </div>
   </div>
 
   <!-- Navbar  -->
   <% unless signed_in? %>
-    <%= render 'layouts/single_page_nav' %>
+    <%= render partial: 'layouts/single_page_nav' %>
   <% end %>
 
 </div>

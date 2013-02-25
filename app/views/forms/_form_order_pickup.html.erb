@@ -8,10 +8,10 @@
     <% end %>
 
     <%= order_form.label "When would you like us to pick up your stuff?" %>
-    <%= order_form.text_field :order_date, id:"datepicker" %>
+    <%= order_form.text_field :order_date, id: "datepicker" %>
 
     <%= order_form.label "Where are we picking up?" %>
-    <%= order_form.collection_select(:address_id, @user.addresses.all, :id, :nickname) %>
+    <%= order_form.collection_select(:address_id, @user.addresses, :id, :nickname) %>
 
     <%= order_form.label "Who referred you?" %>
     <%= order_form.text_field :referral %>
@@ -26,7 +26,7 @@
     <% end %>
 
     <div>
-      <%= order_form.submit "Complete Order", class:"btn btn-danger" %>
+      <%= order_form.submit "Schedule Service", class:"btn btn-danger" %>
     </div>
 
 <% end %>

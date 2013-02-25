@@ -6,16 +6,21 @@ gem 'bcrypt-ruby'
 gem 'thin'
 gem 'jquery_datepicker'
 gem 'coffee-rails', '~> 3.2.1'
+gem 'devise'
+gem 'cancan'
 
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'annotate'
   gem 'rspec_candy'
+  gem 'pg'
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 # Bundle edge Rails instead:
@@ -36,6 +41,7 @@ group :assets do
   #gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
   gem 'jquery-rails'
+  gem 'font-awesome-rails'
 end
 
 group :test do

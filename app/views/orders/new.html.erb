@@ -1,5 +1,7 @@
+<% provide(:title, "Schedule pickup for #{@user.full_name}") %>
+
 <div class="row-fluid">
-  <h2>Pickup Details</h2>
+  <h3>Service Details</h3>
   <div class="span9 offset3">
     <%= render 'forms/form_order_pickup' %>
     <%= link_to "Back", user_path(current_user), class: "btn btn-danger" %>

@@ -1,20 +1,26 @@
-<h3>Pickups</h3>
-<% @user.orders.active.pickup.each do |order| %>
-    <strong><%= order.nickname[order.address_id] %></strong><br/>
-    <%= order.order_date.strftime('%A %B %d') %><br/>
+<div class="tabbable">
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a href="#scheduled_pickups" data-toggle="tab">Pickups</a>
+        </li>
+        <li>
+            <a href="#scheduled_deliveries" data-toggle="tab">Deliveries</a>
+        </li>
+    </ul>
+</div>
 
-<% end %>
-
-<% unless @user.orders.delivery.count == 0 %>
-
-    <h3>Deliveries</h3>
-    <% @user.orders.active.delivery.each do |order| %>
-        <strong><%= order.nickname[order.address_id] %></strong><br/>
-        <%= order.order_date.strftime('%A %B %d') %><br/>
-        <% order.items.each do |show_item| %>
-            <%= show_item.name  %><br/>
-        <% end %>
-
-    <% end %>
-
-<% end %>
+<div class="tab-content">
+    <div class="tab-pane active" id="scheduled_pickups">
+      <% @addresses.each do |address| %>
+        <ul class="upcoming-service">
+          <li class="service-address"><%= address.nickname %></li>
+          <% address.orders.active.pickup.each do |order| %>
+            <li class="service-date"><%= order.order_date.strftime("%A, %B %d") %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+    <div class="tab-pane" id="scheduled_deliveries">
+        <p>I'm a delivery</p>
+    </div>
+</div>
