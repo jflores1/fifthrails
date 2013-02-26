@@ -18,7 +18,7 @@
 class Order < ActiveRecord::Base
   attr_accessible :order_date, :order_amount, :order_notes, :referral, :address_id, :order_type, :order_status, :item_ids, :addresses_attributes, :order_items_attributes, :items_attributes
   belongs_to :user
-  has_many   :addresses
+  belongs_to :address
   has_many   :order_items
   has_many   :items, through: :order_items
 
