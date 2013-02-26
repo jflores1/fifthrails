@@ -25,6 +25,7 @@ Fifthrails::Application.routes.draw do
   match '/pricing',                    to: 'storage_rental#pricing'
   match '/frequently_asked_questions', to: 'storage_rental#faq'
   match '/storage_quote',              to: 'storage_rental#quote'
+  match '/home',                       to: 'storage_rental#home'
   match '/business',                   to: 'storage_rental#business'
   
   # The priority is based upon order of creation:

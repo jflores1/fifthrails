@@ -1,4 +1,12 @@
 @import url(http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/smoothness/jquery-ui.css);
+// Mixins and variables
+//Rounded Corners
+@mixin rounded-corners($radius){
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
 body {
   padding-top: 60px;
 }
@@ -156,5 +164,34 @@ ul.dropdown-menu {
 
 .bottom-margin{
   margin-bottom: 1em !important;
+}
+
+#feedback{
+    height: 8em;
+    width: 8em;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    z-index: 999;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+    a{
+        display: block;
+        background: rgba(0, 0, 0, 0.5);
+        font-size: 1.6em;
+        height: 1.7em;
+        width: 9em;
+        padding: 0.5em 0.5em;
+        color: #ffffff;
+        border-color: rgb(164, 50, 32) rgb(164, 50, 32) #B13623;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
+        @include rounded-corners(4px);
+        *background-color: rgb(164, 50, 32);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    }
 }
 
