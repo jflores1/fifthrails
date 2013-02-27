@@ -11,6 +11,9 @@
   <%= analytics_init if Rails.env.production? %>
 </head>
 <body>
+  <div id="feedback">
+    <a href="mailto:service@fifthroomstorage.com">contact us!</a>
+  </div>
   <header class="navbar navbar-fixed-top">
     <nav class="navbar-inner">
         <%= render partial: 'layouts/header' %>
