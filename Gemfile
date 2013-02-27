@@ -8,6 +8,8 @@ gem 'jquery_datepicker'
 gem 'coffee-rails', '~> 3.2.1'
 gem 'devise'
 gem 'cancan'
+gem 'activeadmin'
+gem 'meta_search', '>= 1.1.0.pre'
 
 
 group :development, :test do
